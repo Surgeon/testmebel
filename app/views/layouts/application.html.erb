@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= root_url %>bootstrap.min.css">
+	<link rel="stylesheet" href="<%= root_url %>style.css">
+    <script type="text/javascript"	src="http://yandex.st/jquery/1.6.4/jquery.min.js"></script>
+	<title>Главная</title>
+</head>
+<body style="margin-top:60px;">
+	<div class="topbar">
+		<div class="topbar-inner">
+			<div class="container">
+				<div class="span"><img src="http://placehold.it/80x35/2973DB/73C5F8&text=Logo" alt="Placeholder image"></div>
+				<ul class="nav">
+					<li><a href="<%= root_url %>">Каталог предприятий</a></li>
+					<li><a href="<%= root_url + 'article/news_articles/' %>">Новости</a></li>
+					<li><a href="<%= root_url + 'articles/' %>">Статьи</a></li>
+					<li><a href="#">О проекте</a></li>
+					<li><a href="#">Добавить компанию</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="serach-block" class="row">
+			<div class="">
+					    <div id="serach" class="span7">
+                            <%= form_tag(city_search_results_path, :method => 'get', :class => 'form-stacked') do%>
+                                <%= label_tag('keyword', "Найти")  %>
+                                <%= text_field_tag 'keyword', nil, :placeholder => 'например: курьерская служба', :id => 'key-word' %>
+                                <%= label_tag('city', "Город")  %>
+                                <%= text_field_tag 'city', nil, :placeholder => 'начните набирать название города', :id => 'city-search' %>
+                                <%= submit_tag "Найти", :class => "btn info" %>
+                            <% end %>
+						</div>
+						<div id="info" class="span8">
+                            <% if @place
+                                    _city = @place
+                               else
+                                    _city = ''
+                               end
+                            %>
+							<h4>Транспортные компании <%= _city %></h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						</div>
+					</div>
+		</div>
+
+<%= yield %>
+
+		<footer class="footer">
+			<p>All rights broken.</p>
+		</footer>
+	</div>
+</body>
+</html>

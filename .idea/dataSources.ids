@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails Catalog: production" product="" version="" jdbc-version="" driver-version="" uuid="6df0d0f0-9144-4358-8810-ee21cf5fe3b8">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/Catalog_production</jdbc-url>
+    <user-name>root</user-name>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Catalog: test" product="" version="" jdbc-version="" driver-version="" uuid="d6884312-8d3c-471e-99a9-503fefb13e43">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/Catalog_test</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99df9e</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Catalog: development" product="MySQL" version="5.1.58-1ubuntu1" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.16 ( Revision: ${bzr.revision-id} )" uuid="33f889c3-97c3-4ba3-a824-c6a4054abb08">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/Catalog_development</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99df9e</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar!/</url>
+      </library>
+    </libraries>
+    <table name="categories" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="categories_companies" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="company_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="cities" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="region_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="million" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="xlink" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="companies" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="address" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="website" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="city_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="image_link" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="xlink" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="regions" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="xlink" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="schema_migrations" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <index name="unique_schema_migrations" unique="true" columns="version" />
+    </table>
+    <table name="subjects" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="xlinks" schema="" catalog="Catalog_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="keyword" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="case" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+  </data-source>
+</component>

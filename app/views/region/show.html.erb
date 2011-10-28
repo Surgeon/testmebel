@@ -1,0 +1,39 @@
+        <ul class="breadcrumb">
+			<li><%= link_to 'Главная', root_url %><span class="divider">/</span></li>
+			<li><%= @reg_name %></li>
+		</ul>
+        <div class="page-header span12">
+			<h2>Транспортные компании <%= @place %></h2>
+			<small>Для выбора туристической фирмы в Краснодарском крае, просто укажите ваш населенный пункт и мы предоставим адреса и телефоны ближайшей к вам компании где Вы сможесте приобрести путешествие во Францию или любую другую страну мира.</small>
+		</div>
+        <div id="catalog" class="row">
+            <% if @million_cities.size > 0 %>
+			<div id="first-glance" class="span12 well">
+				<ul>
+					<% @million_cities.each do |city| %>
+                        <li>
+                        <%= link_to city.name, {:controller => 'city', :action => 'show', :friendly_url => city.friendly_url}, {:class => 'large'} %>
+                        </li>
+                    <% end %>
+				</ul>
+			</div>
+            <% end %>
+			<div class="cities span12">
+				<ul>
+					<% @cities.each do |city| %>
+                        <li class="city">
+                        <%= link_to city.name, {:controller => 'city', :action => 'show', :friendly_url => city.friendly_url}, {:class => 'large'} %>
+                        </li>
+                    <% end %>
+
+				</ul>
+			</div>
+		</div>
+
+
+
+<br>
+<% for i in 0..2 %>
+  <%= @xlink[i].keyword + ' ' +  @rand_city[i] %>,
+<% end %>
+

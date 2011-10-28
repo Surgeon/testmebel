@@ -1,0 +1,183 @@
+li{
+	list-style: none;
+}
+.bold{
+	font-weight: bold;
+}
+.no-mright{
+	margin-right: 0;
+}
+.no-mleft{
+	margin-left: 0;
+}
+/* search input styles */
+
+#key-word{
+	width: 360px;
+}
+#city-search{
+	width: 290px;
+}
+
+
+/*form-stacked overwrite*/
+.form-stacked{
+	padding-left: 0;
+
+}
+
+#first-glance ul li{
+	float: left;
+	width: 220px;
+	font-size:16px;
+	line-height:1.3;
+}
+#first-glance ul li.selected a{
+	font-size:15px;
+	border-radius: 4px;
+	background:#EEDC94;
+	color:#404040;
+	overflow: hidden;
+	padding:2px;
+}
+#first-glance ul li:nth-child(3n){
+	clear: right;
+}
+#first-glance.well{
+
+	padding:19px 0;
+}
+.green{
+	background:#E8FFE8;
+}
+.well.green{
+	background:#E8FFE8;
+}
+div.regions ul li.region{
+	float: left;
+	width: 220px;
+}
+div.regions ul li.region:nth-child(15n){
+	clear: right;
+}
+div.cities ul li.city{
+	float: left;
+	width: 220px;
+}
+div.cities ul li.city:nth-child(2n){
+	clear: right;
+}
+
+div.companies ul{
+	margin: 0;
+}
+li.company{
+	border-top: 1px solid;
+	padding:15px 0px;
+}
+li.company a.header{
+	padding-left:20px;
+	font-size:18px;
+
+}
+
+div.tags{
+	width:470px;
+	float: left;
+}
+
+div.info{
+	overflow: hidden;
+	float: right;
+	width: 220px;
+}
+.new, .callback{
+	padding:3px;
+	margin: 10px 2px;
+
+}
+
+/* 	company styles 	*/
+
+.company div[class*="span"],ul[class*="span"] {
+	margin-left: 0;
+}
+#company-info{
+	padding:5px;
+	overflow: hidden;
+}
+	.description{
+		padding:0 20px 0 0;
+		margin-top: 35px;
+	}
+	#contact-btn, #add-info{
+		margin: 10px 20px;
+	}
+	#additional-info{
+		border: 1px solid rgba(0,0,0,0.5);
+		border-radius:4px;
+	}
+	#additional-info ul{
+		padding:10px;
+	}
+	#add-company-info label.ta-left{
+		text-align: left;
+	}
+
+
+
+
+/* 			news & articles 		*/
+
+#news-menu.well{
+	border: none;
+	padding: 19px 0;
+}
+
+.news{
+	overflow: hidden;
+}
+.news span{
+	width: 100%;
+    float: left;
+}
+.news img{
+	float: left;
+	padding:5px;
+}
+.news p{
+	padding:0 5px;
+	overflow: hidden;
+    width: 340px;
+}
+.news.main h3{
+	line-height: 25px;
+}
+.news.main p{
+	overflow: none;
+	padding:0;
+}
+/*.news.main a{
+	width: 100%;
+	float: left;
+}*/
+.news.main img{
+	float: none;
+}
+
+.article{
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+.article img{
+	float: left;
+	position:relative;
+}
+.article a{
+	background:rgba(255,255,255,0.8);
+	position: absolute;
+	left: 0px;
+	top: 68%;
+	display:inline;
+}

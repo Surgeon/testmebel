@@ -1,0 +1,101 @@
+<ul class="breadcrumb">
+			<li><a href="<%= root_url %>">Главная</a><span class="divider">/</span></li>
+			<li><%= @company.name %></li>
+		</ul>
+		<div class="row">
+			<div class="company span12">
+				<div id="profile" class="sp">
+					<div class="page-header">
+						<h2><%= @company.name %></h2>
+					</div>
+					<div id="company-info" class="span8">
+						<p><span class="bold">Адрес: </span><%= @company.address %></p>
+						<p><span class="bold">Телефон: </span>
+                            <% @company.phones.each do |phone| %>
+                                <%= phone.phone_type + ' ' + phone.number %>
+                            <% end %>
+                        </p>
+						<p><span class="bold">Сайт: </span><a href="<%= @company.website %>"><%= @company.website %></a></p>
+						<div class="tags">
+							Рубрики:
+                            <% @company.categories.each do |category| %>
+							<span class="tag"><%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @company.city.friendly_url, :category => category.url} %></span>
+                            <% end %>
+						</div>
+						<p class="description"><%= @company.description %></p>
+					</div>
+					<div id="images" class="span4">
+                        <% if @company.image_link
+                                 if File.exists?( Dir.pwd + "/public/companies_images/" + @company.image_link )
+                                   img = root_url + 'companies_images/' + @company.image_link
+                                else
+                                   img = 'http://placehold.it/210x180'
+                                end
+                            else
+                                img = 'http://placehold.it/210x180'
+                            end
+                        %>
+						<img src="<%= img %>" alt="" class="large">
+						<img src="http://placehold.it/65x50/" alt="" class="thumb">
+						<img src="http://placehold.it/65x50/" alt="" class="thumb">
+						<img src="http://placehold.it/65x50/" alt="" class="thumb">
+					</div>
+					<div id="services">
+						<div class="map span8"><img src="http://placehold.it/420x120/F3EC29/C62115&text=Yandex.Maps" alt=""></div>
+						<div class="social-btns span4">
+							<img src="http://placehold.it/210x120&text=Social+Btns" alt="">
+						</div>
+					</div>
+					<div class="span12">
+
+					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/contact' %>" id="contact-btn" class="btn success span">Связаться с компанией</a>
+					<a href="" id="add-info" class="span">Уточнить информацию о компании</a>
+					</div>
+				</div>
+				<div id="additional-info" class="span">
+					<ul class="span">
+						<li><span class="bold">Виды услуг:</span>произвольные на выборк клинета</li>
+						<li><span class="bold">Оплата пластиковой картой:</span>есть</li>
+						<li><span class="bold">Работа по воскресеньям:</span>иногда</li>
+						<li><span class="bold">Парковка для минивенов:</span>3 места</li>
+						<li><span class="bold">Вертолетная площадка:</span>действует по средам</li>
+					</ul>
+					<ul class="span">
+						<li><span class="bold">Виды услуг:</span>произвольные на выборк клинета</li>
+						<li><span class="bold">Оплата пластиковой картой:</span>есть</li>
+						<li><span class="bold">Работа по воскресеньям:</span>иногда</li>
+						<li><span class="bold">Парковка для минивенов:</span>3 места</li>
+						<li><span class="bold">Вертолетная площадка:</span>действует по средам</li>
+					</ul>
+				</div>
+
+			</div>
+
+				<div class="span4 adsense">
+					<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
+				</div>
+				<div class="span4">
+				<h4>Компании <%= @company.city.rod_case %></h4>
+				<ul>
+                    <% @pop_companies.each do |pop| %>
+					<li>
+						<%= link_to pop.name, {:controller => 'company', :action => 'show', :friendly_url => @company.city.friendly_url, :id => pop.id} %>
+						<p><%= pop.address %></p>
+					</li>
+                    <% end %>
+				</ul>
+			</div>
+				<div class="span4">
+					<h4>Смотрите также</h4>
+					<ul>
+						<% for i in 0..2 %>
+                          <li>
+                          <a href="<%= root_url + 'city/' + @rand_city[i].friendly_url %>"><%= @xlink[i].keyword + ' ' +  @case[i] %></a>
+                          </li>
+                        <% end %>
+					</ul>
+				</div>
+		</div>
+
+
+

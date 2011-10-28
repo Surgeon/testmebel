@@ -1,0 +1,46 @@
+<ul class="breadcrumb">
+    <li><%= link_to 'Главная', root_url %><span class="divider">/</span></li>
+    <li>Результаты поиска</li>
+</ul>
+<div class="page-header span12">
+    <h2>Транспортные компании Краснодарского края</h2>
+</div>
+<div id="catalog" class="row">
+  <div class="companies span12">
+    <ul>
+      <% @companies.each do |company| %>
+          <li class="company">
+
+            <div class="row"><%= link_to company.name, {:controller => 'company', :action => 'show', :friendly_url => company.city.friendly_url, :id => company.id}, {:class => 'header'} %></div>
+            <!-- Категории -->
+          <div class="info">
+            <p class="address"><%= company.address %></p>
+            <p class="phone">(4712) 32-45-16</p>
+          </div>
+              <%
+              if (Time.now - company.updated_at) < 604800
+                  new = 'Обновлено'
+                  else
+                  new = ''
+                  end
+              %>
+            <span class="new green btn success disabled"><%= new %></span><span id="<%= company.id %>" class="callback btn alert-message ">обратная связь</span>
+            </li>
+          <% end %>
+        </ul>
+        <div class="pagination">
+            <ul>
+              <li class="prev disabled"><a href="#">← Previous</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li class="next"><a href="#">Next »</a></li>
+            </ul>
+        </div>
+      </div>
+    <div class="span4 adsense">
+        <img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
+    </div>
+    </div>

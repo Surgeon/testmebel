@@ -1,0 +1,54 @@
+<div id="news-block" class="row">
+			<div id="news">
+				<div class="main-news span4">
+					<img src="http://placehold.it/210x100/2ADCD6/fff&text=Main+news" alt="">
+					<%= link_to @main_news.title, {:controller => 'news_item', :action => 'show', :id => @main_news.id} %>
+					<p><%= @main_news.body.slice(0..100) %><%= link_to '...', {:controller => 'news_item', :action => 'show', :id => @main_news.id} %></p>
+				</div>
+				<ul class="news span4">
+                    <% for i in 0..3 do%>
+                    <li class="news-item"><span class="timestamp"><%= @news[i].updated_at.strftime("%m/%d/%Y") %> </span><%= link_to @news[i].title, {:controller => 'news_item', :action => 'show', :id => @news[i].id} %></li>
+                    <% end %>
+				</ul>
+				<ul class="news span4">
+                    <% for i in 4..7 do%>
+                    <li class="news-item"><span class="timestamp"><%= @news[i].updated_at.strftime("%m/%d/%Y") %></span><%= link_to @news[i].title, {:controller => 'news_item', :action => 'show', :id => @news[i].id} %></li>
+                    <% end %>
+				</ul>
+			</div>
+			<div id="sub-news" class="span4">
+				<div class="main-news"><img src="http://placehold.it/210x60/A329DB/fff&text=Sub+news" alt=""><a href=""></a></div>
+				<ul class="news">
+                    <% @articles.each do |article| %>
+					    <li><%= link_to article.title, {:controller => 'article', :action => 'show', :id => article.id} %></li>
+                    <% end %>
+				</ul>
+			</div>
+		</div>
+<div class="page-header">
+			<h2>Каталог предприятий</h2>
+		</div>
+		<div id="catalog" class="row">
+			<div id="first-glance" class="span16 well">
+				<ul>
+					<% @million_cities.each do |city| %>
+                        <li>
+
+                          <%= link_to city.name, {:controller => 'city', :action => 'show', :friendly_url => city.friendly_url}, {:class => 'large'} %>
+                        </li>
+                    <% end %>
+				</ul>
+			</div>
+            <div class="regions span16">
+				<ul>
+					<% @regions.each do |region| %>
+                        <li class="region">
+
+                          <%= link_to region.name, {:controller => 'region', :action => 'show', :friendly_url => region.friendly_url}, {:class => 'large'} %>
+                        </li>
+                    <% end %>
+				</ul>
+			</div>
+		</div>
+
+

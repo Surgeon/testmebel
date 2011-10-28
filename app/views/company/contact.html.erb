@@ -1,0 +1,60 @@
+<div class="container">
+		<div id="add-company-info" class="row">
+
+			<div style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1" class="modal">
+
+	          	<div class="modal-header">
+		            <a class="close" href="#">×</a>
+		            <h3>Связаться с ПОЛИМЕРКОМПЛЕКСТ, ООО</h3>
+	          	</div>
+
+	          	<div class="modal-body">
+		            <form action="<%= root_url +  'company/' + @city + '/' + @company + '/contactsdsdsd' %>" method="POST" class="ta-left">
+                        <input type="hidden" name="company_id" value="<%= @company %>">
+		            	<div class="clearfix"><label for="vis_name">Ваше имя: </label><input type="text" name="vis_name"></div>
+		            	<div class="clearfix"><label for="vis_phone">Контактный телефон: </label><input type="text" name="vis_phone"></div>
+		            	<div class="clearfix"><label for="vis_email">Электронная почта: </label><input type="text" name="vis_email"></div>
+		            	<label for="message">Ваше сообщение: </label>
+		            	<textarea name="vis_message" id="" cols="30" rows="10"></textarea>
+                  </div>
+
+              <div class="modal-footer">
+                <input type="submit" class="btn primary" value="Отправить">
+                </form>
+                <a class="btn secondary" href="#">Закрыть</a>
+		        </div>
+        	</div>
+
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+	jQuery(function(){
+
+		data = {};
+		$('.modal-footer input[type="submit"]').click(function(e){
+            e.preventDefault();
+            data.company_id = $('.ta-left').find('[name="company_id"]').val();
+            data.vis_name = $('.ta-left').find('[name="vis_name"]').val();
+            data.vis_phone = $('.ta-left').find('[name="vis_phone"]').val();
+            data.vis_email = $('.ta-left').find('[name="vis_email"]').val();
+            data.vis_message = $('.ta-left').find('[name="vis_message"]').val();
+            console.log(data);
+
+				$.ajax({
+				  type: 'POST',
+				  url: "<%= root_url +  'company/' + @city + '/' + @company + '/contactsdsdsd' %>",
+				  data: data,
+				  success: function(){
+					console.log('success');
+				  },
+				});
+		});
+
+
+
+	});
+
+
+	</script>

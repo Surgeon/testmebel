@@ -1,0 +1,40 @@
+<div class="page-header">
+			<h2>Статьи отрасли</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div id="news-menu" class="well span3">
+					<ul>
+						<li class="selected danger"><a href="">Все темы</a></li>
+						<li><a href="">Главные новости</a></li>
+						<li><a href="">Пресс-релизы</a></li>
+						<li><a href="">Законодательство</a></li>
+					</ul>
+				</div>
+				<div class="span9">
+					<div class="news main">
+                        <% if @article.image_link
+                                 if File.exists?( Dir.pwd + "/public/companies_images/" + @article.image_link )
+                                   img = root_url + 'companies_images/' + @article.image_link
+                                else
+                                   img = 'http://placehold.it/420x120/99C00C/FFF&text=Main+news'
+                                end
+                            else
+                                img = 'http://placehold.it/420x120/99C00C/FFF&text=Main+news'
+                            end
+                        %>
+						<img src="<%= img %>" alt="">
+						<h3><%= @article.title %></h3>
+						<p><%= @article.body %></p>
+					</div>
+					<div class="tags">Рубрики:
+							<span class="tag"><a href="#">Производство мазей</a></span>,
+							<span class="tag"><a href="#">Отгрузка скрепок</a></span>,
+							<span class="tag"><a href="#">Монтаж габаритов</a></span>
+						</div>
+				</div>
+				<div class="span4 adsense">
+					<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
+				</div>
+			</div>
+		</div>

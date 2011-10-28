@@ -1,0 +1,42 @@
+<div class="page-header">
+			<h2>Новости отрасли</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div id="news-menu" class="well span3">
+					<ul>
+						<li class="selected danger"><a href="">Все темы</a></li>
+						<li><a href="">Главные новости</a></li>
+						<li><a href="">Пресс-релизы</a></li>
+						<li><a href="">Законодательство</a></li>
+					</ul>
+				</div>
+				<div class="span8">
+					<div class="page-header">
+						<h3><%= link_to 'Статьи', {:controller => 'news_item', :action => 'index'} %></h3>
+					</div>
+                  <% @articles.each do |article| %>
+
+                      <% if article.image_link
+                         if File.exists?( Dir.pwd + "/public/companies_images/" + article.image_link )
+                               img = root_url + 'companies_images/' + article.image_link
+                            else
+                               img = 'http://placehold.it/100x80/3399FF/FFF&text=News'
+                            end
+                        else
+                            img = 'http://placehold.it/100x80/3399FF/FFF&text=News'
+                        end
+                        %>
+
+					<div class="news">
+						<span><%= article.updated_at.strftime("%m/%d/%Y") %> - <%= link_to article.title, {:controller => 'news_item', :action => 'show', :id => article.id} %></span>
+						<img src="<%= img %>" alt="">
+						<p><%= article.body.slice(0..100) %></p>
+					</div>
+
+
+                    <% end %>
+				</div>
+
+			</div>
+		</div>

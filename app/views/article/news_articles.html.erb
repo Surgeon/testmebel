@@ -1,0 +1,50 @@
+<div class="page-header">
+			<h2>Новости отрасли</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div id="news-menu" class="well span3">
+					<ul>
+						<li class="selected danger"><a href="">Все темы</a></li>
+						<li><a href="">Главные новости</a></li>
+						<li><a href="">Пресс-релизы</a></li>
+						<li><a href="">Законодательство</a></li>
+					</ul>
+				</div>
+				<div class="span8">
+					<div class="page-header">
+						<h3><%= link_to 'Новости', {:controller => 'news_item', :action => 'index'} %></h3>
+					</div>
+                  <% k = 0 %>
+                  <% @news_items.each do |news| %>
+                      <% if k == 0 %>
+					<div class="news main">
+						<img src="http://placehold.it/420x120/99C00C/FFF&text=Main+news" alt="">
+						<%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %>
+						<p><%= news.body.slice(0..100) %></p>
+					</div>
+                      <% k = 1 %>
+                      <% else %>
+					<div class="news">
+						<span><%= news.updated_at.strftime("%m/%d/%Y") %> - <a href=""><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></a></span>
+						<img src="http://placehold.it/100x80/3399FF/FFF&text=News" alt="">
+						<p><%= news.body.slice(0..100) %></p>
+					</div>
+
+                    <% end %>
+                    <% end %>
+				</div>
+				<div class="span5">
+					<div class="page-header">
+						<h3><%= link_to 'Статьи', {:controller => 'article', :action => 'index'} %></h3>
+					</div>
+                    <% @articles.each do |article| %>
+					<div class="article">
+						<span><%= article.updated_at.strftime("%m/%d/%Y") %></span>
+						<img src="http://placehold.it/270x120/CCCC00/999900&text=Articles" alt="">
+						<%= link_to article.title, {:controller => 'article', :action => 'show', :id => article.id} %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
