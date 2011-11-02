@@ -1,5 +1,7 @@
 <ul class="breadcrumb">
 			<li><a href="<%= root_url %>">Главная</a><span class="divider">/</span></li>
+            <li><a href="<%= root_url + @company.city.region.friendly_url %>"><%= @company.city.region.name %></a><span class="divider">/</span></li>
+
 			<li><%= @company.name %></li>
 		</ul>
 		<div class="row">
@@ -49,7 +51,7 @@
 					<div class="span12">
 
 					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/contact' %>" id="contact-btn" class="btn success span">Связаться с компанией</a>
-					<a href="" id="add-info" class="span">Уточнить информацию о компании</a>
+					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/renew'   %>" id="add-info" class="span">Уточнить информацию о компании</a>
 					</div>
 				</div>
 				<div id="additional-info" class="span">
@@ -70,11 +72,11 @@
 				</div>
 
 			</div>
-
-				<div class="span4 adsense">
+                <div class="span4">
+				<div class="adsense">
 					<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
 				</div>
-				<div class="span4">
+				<div class="popular">
 				<h4>Компании <%= @company.city.rod_case %></h4>
 				<ul>
                     <% @pop_companies.each do |pop| %>
@@ -84,8 +86,8 @@
 					</li>
                     <% end %>
 				</ul>
-			</div>
-				<div class="span4">
+			    </div>
+				<div class="also">
 					<h4>Смотрите также</h4>
 					<ul>
 						<% for i in 0..2 %>
@@ -95,7 +97,8 @@
                         <% end %>
 					</ul>
 				</div>
-		</div>
+		    </div>
+         </div>
 
 
 

@@ -9,10 +9,11 @@ class CityController < ApplicationController
     puts page
     if params[:category]
       @city = City.find_by_friendly_url(params[:friendly_url])
+      puts @city.id
       @current_category = Category.find_by_url(params[:category])
       @current_category_id = @current_category.id
-      all_companies = @current_category.companies.where(:city_id == @city.id).size
-      @companies = @current_category.companies.where(:city_id == @city.id).limit((page.to_i * 5).to_s + ',5')
+      all_companies = @current_category.companies.where(:city_id => @city.id).size
+      @companies = @current_category.companies.where(:city_id => @city.id).limit((page.to_i * 5).to_s + ',5')
       @categories = Category.all
     else
       @city = City.find_by_friendly_url(params[:friendly_url])
@@ -67,6 +68,18 @@ class CityController < ApplicationController
   end
 
   def search_results
+
+    if !params[:page]
+      page = 0
+    else
+      page = params[:page]
+    end
+
+    @keyword = params[:keyword]
+    puts params[:city]
+    @city = params[:city]
+    @current_page = page
+
     @companies = Array.new
     if (params[:keyword] != '') and (params[:city] != '')
       cities = City.where("name LIKE '%" + params[:city] + "%'")
@@ -74,14 +87,26 @@ class CityController < ApplicationController
         comp = Company.where("( name LIKE '%" + params[:keyword] + "%' ) and ( city_id = " + city.id.to_s + " ) ")
         @companies = @companies + comp
       end
+      all_companies = @companies.size
+      @companies = @companies[page.to_i * 5,5]
     elsif (params[:keyword] != '')  and (params[:city] == '')
-      @companies =  Company.where("name LIKE '%" + params[:keyword] + "%'")
+      @companies =  Company.where("name LIKE '%" + params[:keyword] + "%'").limit((page.to_i * 5).to_s + ',5')
+      all_companies = Company.where("name LIKE '%" + params[:keyword] + "%'").size
     elsif (params[:keyword] == '') and (params[:city] != '')
       cities = City.where("name LIKE '%" + params[:city] + "%'")
       cities.each do |city|
-        comp = Company.find_all_by_city_id(city.id)
+        comp = Company.where(' city_id = ' + city.id.to_s)
         @companies = @companies + comp
       end
+      all_companies = @companies.size
+      @companies = @companies[page.to_i * 5,5]
+    else
+      @companies = Company.limit((page.to_i * 5).to_s + ',5')
+      all_companies = Company.all.size
+    end
+    @page_size = (all_companies / 5)
+    if (all_companies % 5) != 0
+      @page_size = @page_size + 1
     end
   end
 

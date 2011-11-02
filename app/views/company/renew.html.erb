@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    jQuery(function(){
+        $('.choose-tag').chosen();
+    });
+
+    $('.choose-tag').chosen();
+</script>
+<div class="container">
+		<div id="add-company-info" class="row">
+			<div id="page-header span7">
+				<h2>Уточнение информации</h2>
+			</div>
+			<form action="<%= root_url +  'company/' + @city + '/' + @company.id.to_s + '/renew' %>" method="POST" class="row well">
+				<div class="span7 ta-left">
+					<div class="page-header">
+						<h4>Информация о компании</h4>
+					</div>
+					<div class="">
+						<div class="clearfix"><label class="ta-left" for="name">Название: </label><input type="text" name="name" value="<%= @company.name %>"></div>
+						<div class="clearfix"><select class="choose-tag" placeholder="Выберите город">
+                          <% @cities.each do |city| %>
+                            <option value="<%= city.id %>"><%= city.name %></option>
+                          <% end %>
+                        </select></div>
+						<div class="clearfix"><label class="ta-left" for="address">Адрес: </label><input type="text" name="address" value="<%= @company.address %>"></div>
+						<div class="clearfix"><label class="ta-left" for="phone">Телефон: </label><input type="text" name="phone" value="<%= @phone %>"></div>
+						<div class="clearfix"><label class="ta-left" for="site">Веб сайт: </label><input type="text" name="site" value="<%= @company.website %>"></div>
+						<div class="clearfix"><label class="ta-left" for="email">Электронная почта: </label><input type="text" name="email" value="<%= @company.email %>"></div>
+
+                        <div class="clearfix">
+                          <select name="tags[]" multiple="" class="choose-tag" data-placeholder="Выберите категорию">
+                              <% @categories_all.each do |cat| %>
+                                <option value="<%= cat.id %>"><%= cat.name %></option>
+                              <% end %>
+                        </select>
+                        </div>
+
+                      <div class="clearfix"><label class="ta-left" for="description">Описание: </label><textarea name="description" id="" cols="30" rows="10" value="<%= @company.description %>"></textarea></div>
+					</div>
+				</div>
+
+				<div class="page-header span8">
+					<h4>Оставьте информацию о себе</h4>
+				</div>
+				<div class="form-stacked span8">
+					<div class="clearfix"><label for="">Ваше имя:</label><input type="text" name="user_name"></div>
+					<div class="clearfix"><label for="">Электронная почта:</label><input type="text" name="user_email"></div>
+					<div class="clearfix"><label for="">Вы сотрудник этой компании? </label><input type="checkbox" name="employee"></div>
+					<div class="clearfix"><label for="">Примечания о внесенных изменениях:</label><textarea type="text" name="user_notes"></textarea></div>
+				</div>
+				<div class="span8"><input type="submit" value="Сохранить" class="btn success"></div>
+			</form>
+
+		</div>
+	</div>

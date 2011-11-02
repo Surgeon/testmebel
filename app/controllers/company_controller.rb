@@ -53,4 +53,24 @@ class CompanyController < ApplicationController
 
   end
 
+  def renew
+    if request.get?
+      @city = params[:friendly_url]
+      @company = Company.find(params[:id])
+      @categories_all = Category.all
+      @current_category = @company.categories
+      @cities = City.all
+      if @company.phones.first
+        @phone = @company.phones.first.number
+      else
+        @phone = "No num"
+
+      end
+    elsif request.post?
+      Renew.create(:name => params[:name], :address => params[:address], :website => params[:site], :email => params[:email], :description => params[:description])
+      #Visitor.create(:name => params[:vis_name], :phone => params[:vis_phone], :email => params[:vis_email], :message => params[:vis_message], :company_id => params[:company_id])
+      redirect_to :back, :notice => 'Success'
+    end
+  end
+
 end

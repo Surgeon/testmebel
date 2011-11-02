@@ -5,9 +5,18 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'mysql2'
+  gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+end
+gem "thin"
 gem 'therubyracer'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+gem 'heroku'
+
 
 
 # Gems used only for assets and not required

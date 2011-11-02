@@ -18,6 +18,10 @@ Catalog::Application.routes.draw do
 
   get 'company/:friendly_url/:id/contact/' => 'company#contact'
 
+  post 'company/:friendly_url/:id/renew/' => 'company#renew'
+
+  get 'company/:friendly_url/:id/renew/' => 'company#renew'
+
   match "company/:friendly_url/:id" => 'company#show'
 
   match 'city/:friendly_url/:category' => 'city#show'

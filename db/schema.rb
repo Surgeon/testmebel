@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111027113749) do
+ActiveRecord::Schema.define(:version => 20111102073343) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(:version => 20111027113749) do
 
   create_table "categories_companies", :id => false, :force => true do |t|
     t.integer "company_id"
+    t.integer "category_id"
+  end
+
+  create_table "categories_renews", :id => false, :force => true do |t|
+    t.integer "renew_id"
     t.integer "category_id"
   end
 
@@ -99,6 +104,25 @@ ActiveRecord::Schema.define(:version => 20111027113749) do
     t.integer  "rand_city"
     t.string   "rod_case"
     t.string   "friendly_url"
+  end
+
+  create_table "renews", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "website"
+    t.text     "description"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "city_id"
+    t.text     "user_message"
+  end
+
+  create_table "rphones", :force => true do |t|
+    t.string   "number"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "subjects", :force => true do |t|

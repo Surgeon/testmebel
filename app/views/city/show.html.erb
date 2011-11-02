@@ -51,15 +51,11 @@
                     <p class="address"><%= company.address %></p>
                     <p class="phone"><% if company.phones.first %> <%= company.phones.first.number %> <% end%></p>
                   </div>
-                      <%
-                      if (Time.now - company.updated_at) < 604800
-                          new = 'Обновлено'
-                          else
-                          new = ''
-                          end
-                      %>
-                    <span class="new green btn success disabled"><%= new %></span><span id="<%= company.id %>" class="callback btn alert-message ">обратная связь</span>
-					</li>
+                      <% if (Time.now - company.updated_at) < 604800 %>
+                        <span class="new green btn success disabled">Обновлено</span>
+                      <% end %>
+
+                  </li>
                   <% end %>
                 </ul>
                 <div class="pagination">
@@ -84,40 +80,11 @@
                       <% if @current_page.to_i < @page_size - 1 %>
 			          <li class="next"><a href="<%= root_url + 'city/' + @city.friendly_url + '/' + appendix + '?page=' + (@current_page.to_i + 1).to_s %>">Next »</a></li>
                       <% end %>
-			          <!--<li class="active"><a href="#">1</a></li>
-			          <li><a href="#">2</a></li>
-			          <li><a href="#">3</a></li>
-			          <li><a href="#">4</a></li>
-			          <li><a href="#">5</a></li>
-			          <li class="next"><a href="#">Next »</a></li> -->
 			        </ul>
 			    </div>
               </div>
-            <div class="span4 adsense">
-				<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
-			</div>
-            <div class="span4">
-			<h4>Компании в Тимашевске</h4>
-				<ul>
-                    <% @pop_companies.each do |pop| %>
-					<li>
-						<%= link_to pop.name, {:controller => 'company', :action => 'show', :location => @city.id, :id => pop.id}, {:class => 'large'} %>
-						<p><%= pop.address %></p>
-					</li>
-                    <% end %>
-				</ul>
-			</div>
 
-            <div class="span4">
-				<h4>Смотрите также</h4>
-				<ul>
-                    <% for i in 0..2 %>
-                      <li>
-                      <a href="<%= root_url + 'city/' + @rand_city[i].friendly_url %>"><%= @xlink[i].keyword + ' ' +  @case[i] %></a>
-                      </li>
-                    <% end %>
-				</ul>
-			</div>
+            <%= render :partial => 'partials/pop_and_xlinks', :locals => {:city => @city, :pop_companies => @pop_companies, :rand_city => @rand_city, :xlink => @xlink, :word_case => @case}%>
             </div>
 
 

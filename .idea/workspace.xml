@@ -27,46 +27,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="city_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/city_controller.rb">
+      <file leaf-file-name="company_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/company_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="19" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/company/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="37" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+            <state line="26" column="4" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_results.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/city/search_results.html.erb">
+      <file leaf-file-name="20111102073343_create_rphones.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20111102073343_create_rphones.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="143" selection-start="523" selection-end="523" vertical-scroll-proportion="-8.125">
+            <state line="5" column="20" selection-start="136" selection-end="136" vertical-scroll-proportion="0.2388535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <file leaf-file-name="renew.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/company/renew.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5124224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="65" selection-start="1081" selection-end="1081" vertical-scroll-proportion="-13.75">
+            <state line="30" column="46" selection-start="1683" selection-end="1683" vertical-scroll-proportion="-12.041667">
               <folding />
             </state>
           </provider>
@@ -92,22 +83,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/region_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/city/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/company/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/region/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/article/news_articles.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/news_item/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/article/index.html.erb" />
-        <option value="$PROJECT_DIR$/public/style.css" />
-        <option value="$PROJECT_DIR$/app/views/news_item/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/article/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/article_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/news_item_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/company/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/company/contact.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20111101095533_create_renews.rb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_rightside.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_pop_and_xlinks.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_adsence.erb" />
+        <option value="$PROJECT_DIR$/app/views/city/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/city/search_results.html.erb" />
-        <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/company_controller.rb" />
+        <option value="$PROJECT_DIR$/public/style.css" />
+        <option value="$PROJECT_DIR$/db/migrate/20111102071803_add_city_id_to_renews.rb" />
+        <option value="$PROJECT_DIR$/app/views/company/renew.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20111102072153_create_rcategories.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20111102073343_create_rphones.rb" />
       </list>
     </option>
   </component>
@@ -163,7 +154,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Favorites" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,14 +185,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,7 +261,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Local_network">
+  <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
@@ -601,12 +642,12 @@
     </configuration>
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Query Language Console.Default" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Development: Catalog" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: Catalog" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Local_network" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:rollback" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.db:rollback" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Development: Catalog" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Production: Catalog" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Local_network" />
       <item index="7" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="8" class="java.lang.String" itemvalue="Rake.test" />
     </list>
@@ -667,12 +708,12 @@
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.66838485" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298791" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281787" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27203646" sideWeight="0.21477664" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29179332" sideWeight="0.60652924" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2530395" sideWeight="0.5927835" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44158074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3934708" sideWeight="0.99848026" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4072165" sideWeight="0.99848026" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -727,114 +768,110 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/region/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_pop_and_xlinks.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="59" selection-start="317" selection-end="317" vertical-scroll-proportion="0.15243903">
+        <state line="1" column="44" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_adsence.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/city/search_results.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="4" selection-start="302" selection-end="302" vertical-scroll-proportion="0.054151624">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/style.css">
+    <entry file="file://$PROJECT_DIR$/app/views/city/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="17" selection-start="1876" selection-end="1876" vertical-scroll-proportion="1.306715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/news_item/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="166" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.9046693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/article/news_articles.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="30" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.302974">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/markup/article-view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="16" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.7373541">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/news_item/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="64" selection-start="736" selection-end="736" vertical-scroll-proportion="0.512334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/article/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="39" selection-end="39" vertical-scroll-proportion="0.028462999">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/article_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="63" selection-start="123" selection-end="123" vertical-scroll-proportion="0.056710776">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/news_item_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="66" selection-start="127" selection-end="127" vertical-scroll-proportion="0.054446463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/article/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="55" column="34" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.054151624">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/city_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="19" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.0">
+        <state line="69" column="6" selection-start="1963" selection-end="1963" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111102071803_add_city_id_to_renews.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="1081" selection-end="1081" vertical-scroll-proportion="-13.75">
+        <state line="8" column="40" selection-start="241" selection-end="241" vertical-scroll-proportion="0.41095892">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111020112435_create_companies_categories.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="37" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+        <state line="3" column="30" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Capfile">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/city/search_results.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/region_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="143" selection-start="523" selection-end="523" vertical-scroll-proportion="-8.125">
+        <state line="9" column="2" selection-start="304" selection-end="304" vertical-scroll-proportion="-0.35502958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111102072153_create_rcategories.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5124224">
+        <state line="9" column="33" selection-start="226" selection-end="226" vertical-scroll-proportion="0.25519848">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="20" selection-start="2318" selection-end="2318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="62" selection-start="378" selection-end="378" vertical-scroll-proportion="0.23346303">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/company/renew.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="46" selection-start="1683" selection-end="1683" vertical-scroll-proportion="-12.041667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/company_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/company/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="4" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111102073343_create_rphones.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="136" selection-end="136" vertical-scroll-proportion="0.2388535">
           <folding />
         </state>
       </provider>

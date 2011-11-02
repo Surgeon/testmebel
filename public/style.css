@@ -74,6 +74,7 @@ div.companies ul{
 li.company{
 	border-top: 1px solid;
 	padding:15px 0px;
+    min-height: 82px;
 }
 li.company a.header{
 	padding-left:20px;
@@ -120,7 +121,7 @@ div.info{
 	#additional-info ul{
 		padding:10px;
 	}
-	#add-company-info label.ta-left{
+	.ta-left label{
 		text-align: left;
 	}
 
@@ -180,4 +181,10 @@ div.info{
 	left: 0px;
 	top: 68%;
 	display:inline;
+}
+.chzn-container{
+    margin-left: 130px;
+}
+.chzn-container-multi{
+    width: 400px;
 }

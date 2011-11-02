@@ -2,9 +2,14 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="<%= root_url %>bootstrap.min.css">
+    <meta name="description" content="<%= @page_description %>">
+    <meta name="keywords" content="<%= @page_keywords %>">
+    <link rel="stylesheet" href="<%= root_url %>bootstrap.min.css">
 	<link rel="stylesheet" href="<%= root_url %>style.css">
+    <link rel="stylesheet" href="<%= root_url %>chosen/chosen.css">
     <script type="text/javascript"	src="http://yandex.st/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript"	src="<%= root_url + 'chosen/chosen.jquery.min.js' %>"></script>
+
 	<title>Главная</title>
 </head>
 <body style="margin-top:60px;">

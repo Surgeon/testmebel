@@ -17,30 +17,34 @@
             <p class="address"><%= company.address %></p>
             <p class="phone">(4712) 32-45-16</p>
           </div>
-              <%
-              if (Time.now - company.updated_at) < 604800
-                  new = 'Обновлено'
-                  else
-                  new = ''
-                  end
-              %>
-            <span class="new green btn success disabled"><%= new %></span><span id="<%= company.id %>" class="callback btn alert-message ">обратная связь</span>
+              <% if (Time.now - company.updated_at) < 604800 %>
+                        <span class="new green btn success disabled">Обновлено</span>
+                      <% end %>
+
             </li>
           <% end %>
         </ul>
         <div class="pagination">
             <ul>
-              <li class="prev disabled"><a href="#">← Previous</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li class="next"><a href="#">Next »</a></li>
+
+              <% if @current_page.to_i > 0 %>
+              <li class="prev"><a href="<%= root_url + 'city/search_results?page=' + (@current_page.to_i - 1).to_s + '&keyword=' + @keyword + '&city=' + @city %>">← Previous</a></li>
+              <% end %>
+
+              <% for i in 0..@page_size - 1 do%>
+              <% if @current_page.to_i == i %>
+              <li class="active"><a href="#"><%= i + 1 %></a></li>
+              <% else %>
+              <li><a href="<%= root_url + 'city/search_results?page=' + i.to_s + '&keyword=' + @keyword + '&city=' + @city %>"><%= i + 1 %></a></li>
+              <% end %>
+              <% end %>
+              <% if @current_page.to_i < @page_size - 1 %>
+              <li class="next"><a href="<%= root_url + 'city/search_results?page=' + (@current_page.to_i + 1).to_s + '&keyword=' + @keyword + '&city=' + @city %>">Next »</a></li>
+              <% end %>
             </ul>
         </div>
       </div>
-    <div class="span4 adsense">
-        <img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
+    <div class="span4">
+      <%= render :partial => 'partials/adsence' %>
     </div>
     </div>
