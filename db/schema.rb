@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102073343) do
+ActiveRecord::Schema.define(:version => 20111103090539) do
+
+  create_table "TABLE 18", :id => false, :force => true do |t|
+    t.integer "id"
+    t.string  "name",         :limit => 49
+    t.string  "rod_case",     :limit => 49
+    t.string  "pred_case",    :limit => 52
+    t.string  "friendly_url", :limit => 24
+    t.string  "fed_destrict", :limit => 50
+  end
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -116,6 +125,8 @@ ActiveRecord::Schema.define(:version => 20111102073343) do
     t.datetime "updated_at"
     t.integer  "city_id"
     t.text     "user_message"
+    t.integer  "new"
+    t.integer  "company_id"
   end
 
   create_table "rphones", :force => true do |t|
@@ -130,6 +141,14 @@ ActiveRecord::Schema.define(:version => 20111102073343) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tmps", :force => true do |t|
+    t.string "name"
+    t.string "rod_case"
+    t.string "pred_case"
+    t.string "friendly_url"
+    t.string "fed_destrict"
   end
 
   create_table "users", :force => true do |t|

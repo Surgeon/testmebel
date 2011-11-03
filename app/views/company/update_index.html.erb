@@ -1,0 +1,13 @@
+<div id="catalog" class="row">
+
+    <div class="cities span12">
+        <ul>
+            <% @renews.each do |renew| %>
+                <li class="city">
+                <%= link_to renew.name, {:controller => 'company', :action => 'update_show', :id => renew.id} %>
+                </li>
+            <% end %>
+
+        </ul>
+    </div>
+</div>

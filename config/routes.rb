@@ -2,17 +2,21 @@ Catalog::Application.routes.draw do
 
   match "city/search_results" => "city#search_results"
 
+
   match "articles/" => 'article#index'
 
   match "article/show/:id" => 'article#show'
 
   match "article/news_articles" => 'article#news_articles'
 
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
 
   root :to => 'region#index'
+
+  match 'company/update_show/:id' => 'company#update_show'
 
   post 'company/:friendly_url/:id/contact/' => 'company#contact'
 
@@ -24,16 +28,24 @@ Catalog::Application.routes.draw do
 
   match "company/:friendly_url/:id" => 'company#show'
 
+  get 'company/add_company' => 'company#add_company'
+
+  post 'company/add_company' => 'company#add_company'
+
+  match 'company/update_index' => 'company#update_index'
+
+  match 'company/update_show/:id' => 'company#update_show'
+
+
   match 'city/:friendly_url/:category' => 'city#show'
 
   match 'city/:friendly_url' => 'city#show'
 
 
-  get "company/index"
-
   match 'news/' => 'news_item#index'
 
   match 'news/show/:id' => 'news_item#show'
+
 
   match '/:friendly_url(.:format)' => 'region#show'
 

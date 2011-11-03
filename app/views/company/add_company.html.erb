@@ -10,22 +10,22 @@
 			<div id="page-header span7">
 				<h2>Уточнение информации</h2>
 			</div>
-			<form action="<%= root_url +  'company/' + @city + '/' + @company.id.to_s + '/renew' %>" method="POST" class="row well">
+			<form action="<%= root_url +  'company/add_company' %>" method="POST" class="row well">
 				<div class="span7 ta-left">
 					<div class="page-header">
 						<h4>Информация о компании</h4>
 					</div>
 					<div class="">
-						<div class="clearfix"><label class="ta-left" for="name">Название: </label><input type="text" name="name" value="<%= @company.name %>"></div>
+						<div class="clearfix"><label class="ta-left" for="name">Название: </label><input type="text" name="name" ></div>
 						<div class="clearfix"><select name="city" class="choose-tag" placeholder="Выберите город">
                           <% @cities.each do |city| %>
                             <option value="<%= city.id %>"><%= city.name %></option>
                           <% end %>
                         </select></div>
-						<div class="clearfix"><label class="ta-left" for="address">Адрес: </label><input type="text" name="address" value="<%= @company.address %>"></div>
-						<div class="clearfix"><label class="ta-left" for="phone">Телефон: </label><input type="text" name="phone" value="<%= @phone %>"></div>
-						<div class="clearfix"><label class="ta-left" for="site">Веб сайт: </label><input type="text" name="site" value="<%= @company.website %>"></div>
-						<div class="clearfix"><label class="ta-left" for="email">Электронная почта: </label><input type="text" name="email" value="<%= @company.email %>"></div>
+						<div class="clearfix"><label class="ta-left" for="address">Адрес: </label><input type="text" name="address" ></div>
+						<div class="clearfix"><label class="ta-left" for="phone">Телефон: </label><input type="text" name="phone" ></div>
+						<div class="clearfix"><label class="ta-left" for="site">Веб сайт: </label><input type="text" name="site" ></div>
+						<div class="clearfix"><label class="ta-left" for="email">Электронная почта: </label><input type="text" name="email" ></div>
 
                         <div class="clearfix">
                           <select name="tags[]" multiple="" class="choose-tag" data-placeholder="Выберите категорию">
@@ -35,7 +35,7 @@
                         </select>
                         </div>
 
-                      <div class="clearfix"><label class="ta-left" for="description">Описание: </label><textarea name="description" id="" cols="30" rows="10" value="<%= @company.description %>"></textarea></div>
+                      <div class="clearfix"><label class="ta-left" for="description">Описание: </label><textarea name="description" id="" cols="30" rows="10" ></textarea></div>
 					</div>
 				</div>
 

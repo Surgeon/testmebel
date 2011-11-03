@@ -58,7 +58,6 @@ class CompanyController < ApplicationController
       @city = params[:friendly_url]
       @company = Company.find(params[:id])
       @categories_all = Category.all
-      @current_category = @company.categories
       @cities = City.all
       if @company.phones.first
         @phone = @company.phones.first.number
@@ -67,10 +66,32 @@ class CompanyController < ApplicationController
 
       end
     elsif request.post?
-      Renew.create(:name => params[:name], :address => params[:address], :website => params[:site], :email => params[:email], :description => params[:description])
+      Renew.create(:new => 0, :name => params[:name], :address => params[:address], :website => params[:site], :email => params[:email], :description => params[:description], :city_id => params[:city])
       #Visitor.create(:name => params[:vis_name], :phone => params[:vis_phone], :email => params[:vis_email], :message => params[:vis_message], :company_id => params[:company_id])
+      @categories_all = Category.all
+      @cities = City.all
       redirect_to :back, :notice => 'Success'
     end
+  end
+
+  def add_company
+    if request.get?
+      @categories_all = Category.all
+      @cities = City.all
+    elsif request.post?
+      Renew.create(:new => 0, :name => params[:name], :address => params[:address], :website => params[:site], :email => params[:email], :description => params[:description], :city_id => params[:city])
+      @categories_all = Category.all
+      @cities = City.all
+    end
+  end
+
+  def update_index
+    @renews = Renew.all
+  end
+
+  def update_show
+    @renew = Renew.find(params[:id])
+    @company = Company.find
   end
 
 end
