@@ -5,17 +5,17 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'pg'
-end
-group :development, :test do
+
   gem 'mysql2'
   gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-end
+
 gem "thin"
 gem 'therubyracer'
-
+gem 'yandex_inflect'
 gem 'heroku'
+gem 'fastercsv'
+gem 'will_paginate'
+gem 'sitemap_generator'
 
 
 

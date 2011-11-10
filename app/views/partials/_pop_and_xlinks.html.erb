@@ -1,25 +1,25 @@
 <div class="span4">
 <%= render :partial => 'partials/adsence' %>
 <div class="popular">
-<h4>Компании <%= city.rod_case %></h4>
-    <ul>
+<h5>Компании <%= city.rod_case %></h5>
+    <div>
         <% pop_companies.each do |pop| %>
-        <li>
-            <%= link_to pop.name, {:controller => 'company', :action => 'show', :location => city.id, :id => pop.id}, {:class => 'large'} %>
-            <p><%= pop.address %></p>
-        </li>
+        <p>
+            <strong><%= link_to pop.name, {:controller => 'company', :action => 'show', :location => city.id, :id => pop.id}, {:class => 'large'} %></strong><br/>
+            <em style="font-size:11px;"><%= pop.address %></em>
+        </p>
         <% end %>
-    </ul>
+    </div>
 </div>
 
 <div class="also">
-    <h4>Смотрите также</h4>
-    <ul>
+    <h5>Смотрите также</h5>
+    <div>
         <% for i in 0..2 %>
-          <li>
+          <p>
           <a href="<%= root_url + 'city/' + rand_city[i].friendly_url %>"><%= xlink[i].keyword + ' ' +  word_case[i] %></a>
-          </li>
+          </p>
         <% end %>
-    </ul>
+    </div>
 </div>
 </div>

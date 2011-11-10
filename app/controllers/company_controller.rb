@@ -4,7 +4,9 @@ class CompanyController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    @place = @company.city.rod_case
+    if @company.categories[0] and @company.address
+      @title_company = @company.categories[0].name + ' - ' + @company.name + ' | ' + @company.address
+    end
 
     @xlink = Array.new
     @rand_city = Array.new
@@ -46,6 +48,7 @@ class CompanyController < ApplicationController
     if request.get?
       @city = params[:friendly_url]
       @company = params[:id]
+      @company_name = Company.find(params[:id]).name
     elsif request.post?
       Visitor.create(:name => params[:vis_name], :phone => params[:vis_phone], :email => params[:vis_email], :message => params[:vis_message], :company_id => params[:company_id])
       return 'Ok!'
@@ -57,6 +60,8 @@ class CompanyController < ApplicationController
     if request.get?
       @city = params[:friendly_url]
       @company = Company.find(params[:id])
+      @city_id = City.find_by_friendly_url(params[:friendly_url]).id
+      puts @city_id
       @categories_all = Category.all
       @cities = City.all
       if @company.phones.first

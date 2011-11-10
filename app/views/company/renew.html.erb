@@ -17,9 +17,13 @@
 					</div>
 					<div class="">
 						<div class="clearfix"><label class="ta-left" for="name">Название: </label><input type="text" name="name" value="<%= @company.name %>"></div>
-						<div class="clearfix"><select name="city" class="choose-tag" placeholder="Выберите город">
+						<div class="clearfix"><select name="city" class="choose-tag" placeholder="Выберите город" >
                           <% @cities.each do |city| %>
-                            <option value="<%= city.id %>"><%= city.name %></option>
+                            <% if @city_id == city.id %>
+                            <option value="<%= city.id %>" selected><%= city.name %></option>
+                            <% else %>
+                            <option value="<%= city.id %>" ><%= city.name %></option>
+                            <% end %>
                           <% end %>
                         </select></div>
 						<div class="clearfix"><label class="ta-left" for="address">Адрес: </label><input type="text" name="address" value="<%= @company.address %>"></div>
@@ -50,6 +54,7 @@
 				</div>
 				<div class="span8"><input type="submit" value="Сохранить" class="btn success"></div>
 			</form>
+            <%= link_to 'Закрыть', {:controller => 'company', :action => 'show', :friendly_url => @city, :id => @company}, :class => 'btn secondary' %>
 
 		</div>
 	</div>

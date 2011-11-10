@@ -6,6 +6,11 @@ class Company < ActiveRecord::Base
 
   before_create :rand_xlink
 
+  def protected_attributes
+    []
+  end
+
+
   def rand_xlink
     r_id = rand(Xlink.maximum('id'))
     self.xlink = r_id

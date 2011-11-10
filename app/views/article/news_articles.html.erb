@@ -3,37 +3,37 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div id="news-menu" class="well span3">
+				<div class="span-one-third">
+				<!--
 					<ul>
 						<li class="selected danger"><a href="">Все темы</a></li>
 						<li><a href="">Главные новости</a></li>
 						<li><a href="">Пресс-релизы</a></li>
 						<li><a href="">Законодательство</a></li>
 					</ul>
+				-->
+				<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
 				</div>
-				<div class="span8">
-					<div class="page-header">
-						<h3><%= link_to 'Новости', {:controller => 'news_item', :action => 'index'} %></h3>
-					</div>
+				<div class="span-two-thirds">
+						
                   <% k = 0 %>
                   <% @news_items.each do |news| %>
                       <% if k == 0 %>
-					<div class="news main">
-						<img src="http://placehold.it/420x120/99C00C/FFF&text=Main+news" alt="">
-						<%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %>
-						<p><%= news.body.slice(0..100) %></p>
+					<div class="news main">				
+						<h3><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></h3>
+						<p><%= news.body.slice(0..200) %>...</p>
 					</div>
                       <% k = 1 %>
                       <% else %>
 					<div class="news">
-						<span><%= news.updated_at.strftime("%m/%d/%Y") %> - <a href=""><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></a></span>
-						<img src="http://placehold.it/100x80/3399FF/FFF&text=News" alt="">
-						<p><%= news.body.slice(0..100) %></p>
+						<h5><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></h5>
+						<p><em><%= news.updated_at.strftime("%m/%d/%Y") %></em> - <%= news.body.slice(0..150) %></p>
 					</div>
 
                     <% end %>
                     <% end %>
 				</div>
+				<!--
 				<div class="span5">
 					<div class="page-header">
 						<h3><%= link_to 'Статьи', {:controller => 'article', :action => 'index'} %></h3>
@@ -46,5 +46,6 @@
 					</div>
 					<% end %>
 				</div>
+				-->
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 class CityController < ApplicationController
 
   def show
+
     if !params[:page]
       page = 0
     else
@@ -10,24 +11,29 @@ class CityController < ApplicationController
     if params[:category]
       @city = City.find_by_friendly_url(params[:friendly_url])
       puts @city.id
-      @current_category = Category.find_by_url(params[:category])
-      @current_category_id = @current_category.id
-      all_companies = @current_category.companies.where(:city_id => @city.id).size
-      @companies = @current_category.companies.where(:city_id => @city.id).limit((page.to_i * 5).to_s + ',5')
+      @companies = Category.find_by_url(params[:category]).companies.where(:city_id => @city.id).paginate(:page => params[:page], :per_page => 10)
+
       @categories = Category.all
     else
       @city = City.find_by_friendly_url(params[:friendly_url])
-      all_companies = @city.companies.size
-      @companies = @city.companies.limit((page.to_i * 5).to_s + ',5')
+      @companies = @city.companies.paginate(:page => params[:page], :per_page => 10)
       @categories = Category.all
       @current_category_id = 0
     end
+
+
+
     @place = @city.rod_case
     @region = Region.find(@city.region_id)
+    @title = @city.rod_case
 
-    @page_size = (all_companies / 5)
-    if (all_companies % 5) != 0
-      @page_size = @page_size + 1
+    if @city.id == 1072
+      @head_text = t('head_text_msc')
+      @text = t('text_msc')
+
+    else
+      @head_text = t('head_text_reg') + @region.rod_case + ' / ' + @place
+      @text = t('text_reg_1') + YandexInflect.inflections(@region.name)[1] + ' / ' + YandexInflect.inflections(@city.name)[1] + t('text_reg_2') + YandexInflect.inflections(@region.name)[5] + ' / ' + @city.pred_case + t('text_reg_3')
     end
 
     @current_page = page
@@ -50,7 +56,7 @@ class CityController < ApplicationController
       if @xlink[i].case == 0
         @rand_city[i] = City.find_by_id(cit + i)
         if !@rand_city[i]
-          cit = 1
+          cit = 2
           @rand_city[i] = City.find_by_id(cit + i)
         end
         @case[i] = @rand_city[i].pred_case

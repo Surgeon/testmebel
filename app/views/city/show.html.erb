@@ -3,11 +3,31 @@
             <li><%= link_to @region.name, {:controller => 'region', :action => 'show', :friendly_url => @region.friendly_url} %><span class="divider">/</span></li>
 			<li><%= @city.name %></li>
 		</ul>
-        <div class="page-header span12">
-			<h2>Транспортные компании <%= @city.rod_case %></h2>
+        <div class="page-header">
+			<h1>Мебель <%= @city.rod_case %></h1>
 		</div>
         <div id="catalog" class="row">
-			<div id="first-glance" class="span12 well">
+		<div class="span16">
+			<h4>Категории</h4>
+			<div id="first-glance" class="well" style="padding-bottom:14px;">
+				
+                    <% if @current_category_id == 0 %>
+                            <a href="<%= root_url + 'city/' + @city.friendly_url.to_s %>" class="btn small primary">Все</a>
+                    <% else %>
+                            <a href="<%= root_url + 'city/' + @city.friendly_url.to_s %>" class="btn small">Все</a>
+                    <% end %>
+
+					<% @categories.each do |category| %>
+                        <% if category.id != @current_category_id %>
+                                <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url}, {:class => 'btn small'} %>                            
+                        <% else %>
+                          
+                            <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url}, {:class => 'btn small primary'} %>
+                          
+						<% end %>
+					<% end %>
+				
+<!--
 				<ul>
                     <% if @current_category_id == 0 %>
                         <li class="selected">
@@ -20,7 +40,6 @@
                     <% end %>
 
 					<% @categories.each do |category| %>
-
                         <% if category.id != @current_category_id %>
                             <li>
                                 <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url } %>
@@ -33,14 +52,18 @@
 
                 <% end %>
                 </ul>
+-->
             </div>
+			</div>
           <div class="companies span12">
             <ul>
               <% @companies.each do |company| %>
                   <li class="company">
 
-                    <div class="row"><%= link_to company.name, {:controller => 'company', :action => 'show', :friendly_url => @city.friendly_url, :id => company.id}, {:class => 'header'} %></div>
-                    <div class="tags">Рубрики:
+                    <div class="row"></div>
+                    <div class="tags">
+					<h5><%= link_to company.name, {:controller => 'company', :action => 'show', :friendly_url => @city.friendly_url, :id => company.id}, {:class => 'header'} %></h5>
+					Рубрики:
                       <% company.categories.each do |category| %>
                         <span class="tag"><%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url} %></span>
                       <% end %>
@@ -58,38 +81,10 @@
                   </li>
                   <% end %>
                 </ul>
-                <div class="pagination">
-			        <ul>
-                      <% if @current_category_id != 0
-                            appendix = @current_category.url
-                         else
-                            appendix = ''
-                         end
-                      %>
-                      <% if @current_page.to_i > 0 %>
-			          <li class="prev"><a href="<%= root_url + 'city/' + @city.friendly_url + '/' + appendix + '?page=' + (@current_page.to_i - 1).to_s %>">← Previous</a></li>
-                      <% end %>
 
-                      <% for i in 0..@page_size - 1 do%>
-                      <% if @current_page.to_i == i %>
-                      <li class="active"><a href="#"><%= i + 1 %></a></li>
-                      <% else %>
-                      <li><a href="<%= root_url + 'city/' + @city.friendly_url + '/' + appendix + '?page=' + i.to_s %>"><%= i + 1 %></a></li>
-                      <% end %>
-                      <% end %>
-                      <% if @current_page.to_i < @page_size - 1 %>
-			          <li class="next"><a href="<%= root_url + 'city/' + @city.friendly_url + '/' + appendix + '?page=' + (@current_page.to_i + 1).to_s %>">Next »</a></li>
-                      <% end %>
-			        </ul>
-			    </div>
+                <%= will_paginate @companies %>
+
               </div>
 
             <%= render :partial => 'partials/pop_and_xlinks', :locals => {:city => @city, :pop_companies => @pop_companies, :rand_city => @rand_city, :xlink => @xlink, :word_case => @case}%>
             </div>
-
-
-
-
-
-
-

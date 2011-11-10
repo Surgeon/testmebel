@@ -10,7 +10,19 @@
     <script type="text/javascript"	src="http://yandex.st/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript"	src="<%= root_url + 'chosen/chosen.jquery.min.js' %>"></script>
 
-	<title>Главная</title>
+    <% if @title %>
+        <title>Мебельные компании <%= @title %></title>
+    <% elsif @title_company %>
+        <title><%= @title_company %></title>
+    <% else %>
+        <title>Мебельные компании</title>
+    <% end %>
+
+
+
+	<!-- Put this script tag to the <head> of your page -->
+	<script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?11" charset="windows-1251"></script>
+
 </head>
 <body style="margin-top:60px;">
 	<div class="topbar">
@@ -22,7 +34,7 @@
 					<li><a href="<%= root_url + 'article/news_articles/' %>">Новости</a></li>
 					<li><a href="<%= root_url + 'articles/' %>">Статьи</a></li>
 					<li><a href="#">О проекте</a></li>
-					<li><a href="<% root_url %>company/add_company">Добавить компанию</a></li>
+					<li><a href="<%= root_url + 'company/add_company/' %>">Добавить компанию</a></li>
 				</ul>
 			</div>
 		</div>
@@ -30,7 +42,7 @@
 	<div class="container">
 		<div id="serach-block" class="row">
 			<div class="">
-					    <div id="serach" class="span7">
+					    <div id="serach" class="span-one-third">
                             <%= form_tag(city_search_results_path, :method => 'get', :class => 'form-stacked') do%>
                                 <%= label_tag('keyword', "Найти")  %>
                                 <%= text_field_tag 'keyword', nil, :placeholder => 'например: курьерская служба', :id => 'key-word' %>
@@ -39,16 +51,18 @@
                                 <%= submit_tag "Найти", :class => "btn info" %>
                             <% end %>
 						</div>
-						<div id="info" class="span8">
-                            <% if @place
-                                    _city = @place
+						<div id="info" class="span-two-thirds">
+                            <% if @head_text
+                                    head_text = @head_text
+                                    text = @text
                                else
-                                    _city = ''
+                                    head_text = t('head_text_all')
+                                    text = t('text_all')
                                end
                             %>
-							<h4>Транспортные компании <%= _city %></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						</div>
+							<h4><%= head_text %></h4>
+							<p><%= text %></p>
+                        </div>
 					</div>
 		</div>
 

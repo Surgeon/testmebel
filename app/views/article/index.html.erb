@@ -29,7 +29,7 @@
                         %>
 
 					<div class="news">
-						<span><%= article.updated_at.strftime("%m/%d/%Y") %> - <%= link_to article.title, {:controller => 'news_item', :action => 'show', :id => article.id} %></span>
+						<span><%= article.updated_at.strftime("%m/%d/%Y") %> - <%= link_to article.title, {:controller => 'article', :action => 'show', :id => article.id} %></span>
 						<img src="<%= img %>" alt="">
 						<p><%= article.body.slice(0..100) %></p>
 					</div>

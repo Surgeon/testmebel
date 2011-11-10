@@ -1,6 +1,7 @@
-<ul class="breadcrumb">
+<ul class="breadcrumb"> 
 			<li><a href="<%= root_url %>">Главная</a><span class="divider">/</span></li>
             <li><a href="<%= root_url + @company.city.region.friendly_url %>"><%= @company.city.region.name %></a><span class="divider">/</span></li>
+            <li><a href="<%= root_url + 'city/' + @company.city.friendly_url %>"><%= @company.city.name %></a><span class="divider">/</span></li>
 
 			<li><%= @company.name %></li>
 		</ul>
@@ -11,22 +12,50 @@
 						<h2><%= @company.name %></h2>
 					</div>
 					<div id="company-info" class="span8">
+
+                        <% if @company.address %>
 						<p><span class="bold">Адрес: </span><%= @company.address %></p>
+                        <% end %>
+
+                        <% if @company.phones[0] %>
 						<p><span class="bold">Телефон: </span>
                             <% @company.phones.each do |phone| %>
-                                <%= phone.phone_type + ' ' + phone.number %>
+                                <% if phone.phone_type %>
+                                    <%= phone.phone_type %>
+                                <% end %>
+                                <%= ' ' + phone.number %>
                             <% end %>
                         </p>
+                        <% end %>
+                        <% if @company.website %>
 						<p><span class="bold">Сайт: </span><a href="<%= @company.website %>"><%= @company.website %></a></p>
+                        <% end %>
 						<div class="tags">
-							Рубрики:
+							<span class="bold">Вид деятельности: </span>
                             <% @company.categories.each do |category| %>
-							<span class="tag"><%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @company.city.friendly_url, :category => category.url} %></span>
+							<span class="tag"><%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @company.city.friendly_url, :category => category.url} %></span>,&nbsp;
                             <% end %>
 						</div>
 						<p class="description"><%= @company.description %></p>
+						
+						<blockquote>
+						<p><small>Нашли ошибку? Вы можете <a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/renew'   %>" >уточнить информацию о компании</a>.</small></p>  
+						</blockquote>
+						
+						
 					</div>
 					<div id="images" class="span4">
+					
+					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/contact' %>" id="contact-btn" class="btn success span">Связаться с компанией</a>
+					
+					<div class="my_social_buts">					
+					
+					<img src="<%= root_url + 'img/vkontakte.jpg' %>" alt="">
+					<img src="<%= root_url + 'img/facebook.jpg' %>" alt="">
+					<img src="<%= root_url + 'img/twitter.jpg' %>" alt="">
+					
+					</div>
+					<!--
                         <% if @company.image_link
                                  if File.exists?( Dir.pwd + "/public/companies_images/" + @company.image_link )
                                    img = root_url + 'companies_images/' + @company.image_link
@@ -41,19 +70,34 @@
 						<img src="http://placehold.it/65x50/" alt="" class="thumb">
 						<img src="http://placehold.it/65x50/" alt="" class="thumb">
 						<img src="http://placehold.it/65x50/" alt="" class="thumb">
+					-->
+						
 					</div>
+
+					
+
 					<div id="services">
-						<div class="map span8"><img src="http://placehold.it/420x120/F3EC29/C62115&text=Yandex.Maps" alt=""></div>
+						<div class="map span8">
+						<h4><%= @company.name %> на карте</h4>
+						<img src="<%= root_url + 'img/maps_cover.jpg' %>" alt="">
+						<p><strong>похожие категории: <a href="<%= root_url + 'city/' + @rand_city[0].friendly_url %>"><%= @xlink[0].keyword + ' ' +  @case[0] %></a></strong></p>
+					
+					</div>
+						
+										
+					
+
+					
+						
+<!--
 						<div class="social-btns span4">
 							<img src="http://placehold.it/210x120&text=Social+Btns" alt="">
 						</div>
+-->
 					</div>
-					<div class="span12">
 
-					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/contact' %>" id="contact-btn" class="btn success span">Связаться с компанией</a>
-					<a href="<%= root_url + 'company/' + @company.city.friendly_url + '/' + @company.id.to_s + '/renew'   %>" id="add-info" class="span">Уточнить информацию о компании</a>
-					</div>
 				</div>
+<!--				
 				<div id="additional-info" class="span">
 					<ul class="span">
 						<li><span class="bold">Виды услуг:</span>произвольные на выборк клинета</li>
@@ -70,23 +114,24 @@
 						<li><span class="bold">Вертолетная площадка:</span>действует по средам</li>
 					</ul>
 				</div>
-
+-->
 			</div>
                 <div class="span4">
 				<div class="adsense">
 					<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
 				</div>
 				<div class="popular">
-				<h4>Компании <%= @company.city.rod_case %></h4>
-				<ul>
+				<h5>Компании <%= @company.city.rod_case %></h5>
+				<div>
                     <% @pop_companies.each do |pop| %>
-					<li>
-						<%= link_to pop.name, {:controller => 'company', :action => 'show', :friendly_url => @company.city.friendly_url, :id => pop.id} %>
-						<p><%= pop.address %></p>
-					</li>
+					<p>
+						<strong><%= link_to pop.name, {:controller => 'company', :action => 'show', :friendly_url => @company.city.friendly_url, :id => pop.id} %></strong><br />
+						<em><%= pop.address %></em>
+					</p>
                     <% end %>
-				</ul>
+				</div>
 			    </div>
+		<!--
 				<div class="also">
 					<h4>Смотрите также</h4>
 					<ul>
@@ -97,6 +142,7 @@
                         <% end %>
 					</ul>
 				</div>
+		-->
 		    </div>
          </div>
 

@@ -1,4 +1,4 @@
-li{
+li{ 
 	list-style: none;
 }
 .bold{
@@ -13,10 +13,12 @@ li{
 /* search input styles */
 
 #key-word{
-	width: 360px;
+	width: 290px;
+	margin-bottom:8px;
 }
 #city-search{
 	width: 290px;
+	margin-bottom:8px;
 }
 
 
@@ -43,10 +45,8 @@ li{
 #first-glance ul li:nth-child(3n){
 	clear: right;
 }
-#first-glance.well{
+#first-glance.well{	}
 
-	padding:19px 0;
-}
 .green{
 	background:#E8FFE8;
 }
@@ -72,12 +72,13 @@ div.companies ul{
 	margin: 0;
 }
 li.company{
-	border-top: 1px solid;
-	padding:15px 0px;
+	border-bottom: 1px dotted #CCC;
+	padding-top:
+	padding:7px 0px;
     min-height: 82px;
 }
 li.company a.header{
-	padding-left:20px;
+	p adding-left:20px;
 	font-size:18px;
 
 }
@@ -130,13 +131,16 @@ div.info{
 
 /* 			news & articles 		*/
 
-#news-menu.well{
-	border: none;
-	padding: 19px 0;
-}
+#news-right-block{ }
+.news-content p{font-size:14px; line-height:21px;}
+#news-menu {  }
+.last-news dt{margin-bottom:15px;}
 
 .news{
+/*
 	overflow: hidden;
+*/
+	margin-bottom:21px;
 }
 .news span{
 	width: 100%;
@@ -146,17 +150,17 @@ div.info{
 	float: left;
 	padding:5px;
 }
-.news p{
-	padding:0 5px;
-	overflow: hidden;
-    width: 340px;
-}
+
 .news.main h3{
 	line-height: 25px;
 }
 .news.main p{
+	/* 
 	overflow: none;
 	padding:0;
+	*/
+	font-size:16px;
+	line-height:23px;
 }
 /*.news.main a{
 	width: 100%;
@@ -188,3 +192,13 @@ div.info{
 .chzn-container-multi{
     width: 400px;
 }
+
+
+.social-btns {
+	float:left;
+}
+.my_social_buts { text-align:center; margin-top:80px;}
+.my_social_buts img {margin:7px 5px;}
+#first-glance  a {margin-right:7px;margin-bottom:7px;}
+.info .address {font-size:12px; padding-top:12px;}
+.info .phone {font-size:11px; font-style:italic;}

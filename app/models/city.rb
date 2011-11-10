@@ -7,6 +7,7 @@ class City < ActiveRecord::Base
 
   before_create :rand_xlink
 
+
   def rand_xlink
     r_id = rand(Xlink.maximum('id'))
     self.xlink = r_id

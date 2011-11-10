@@ -2,23 +2,28 @@
 			<li><%= link_to 'Главная', root_url %><span class="divider">/</span></li>
 			<li><%= @reg_name %></li>
 		</ul>
-        <div class="page-header span12">
-			<h2>Транспортные компании <%= @place %></h2>
-			<small>Для выбора туристической фирмы в Краснодарском крае, просто укажите ваш населенный пункт и мы предоставим адреса и телефоны ближайшей к вам компании где Вы сможесте приобрести путешествие во Францию или любую другую страну мира.</small>
+        <div class="page-header">
+			<h2>Транспортные компании <%= @place %></h2>	
 		</div>
+
         <div id="catalog" class="row">
+			<div class="span16">
+				<p>Для выбора туристической фирмы в Краснодарском крае, просто укажите ваш населенный пункт и мы предоставим адреса и телефоны ближайшей к вам компании где Вы сможесте приобрести путешествие во Францию или любую другую страну мира.</p>
+			</div>
             <% if @million_cities.size > 0 %>
-			<div id="first-glance" class="span12 well">
-				<ul>
+			<div id="first-glance" class="span12">
+				<div style="border-bottom:1px dotted #CCC; margin-bottom:15px; padding-bottom:10px;">
 					<% @million_cities.each do |city| %>
                         <li>
-                        <%= link_to city.name, {:controller => 'city', :action => 'show', :friendly_url => city.friendly_url}, {:class => 'large'} %>
+                        <strong><%= link_to city.name, {:controller => 'city', :action => 'show', :friendly_url => city.friendly_url}, {:class => 'large'} %></strong>
                         </li>
                     <% end %>
-				</ul>
+				</div>
+				
 			</div>
             <% end %>
 			<div class="cities span12">
+			<h5>Другие города <%= @place %></h5>
 				<ul>
 					<% @cities.each do |city| %>
                         <li class="city">
@@ -28,12 +33,13 @@
 
 				</ul>
 			</div>
+          <%= render :partial => 'partials/pop_and_xlinks', :locals => {:city => @region, :pop_companies => @pop_companies, :rand_city => @rand_city, :xlink => @xlink, :word_case => @case}%>
 		</div>
 
 
 
 <br>
-<% for i in 0..2 %>
-  <%= @xlink[i].keyword + ' ' +  @rand_city[i] %>,
-<% end %>
+
+
+
 

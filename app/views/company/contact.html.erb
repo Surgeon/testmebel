@@ -5,7 +5,7 @@
 
 	          	<div class="modal-header">
 		            <a class="close" href="#">×</a>
-		            <h3>Связаться с ПОЛИМЕРКОМПЛЕКСТ, ООО</h3>
+		            <h3>Связаться с <%= @company_name %></h3>
 	          	</div>
 
 	          	<div class="modal-body">
@@ -21,7 +21,7 @@
               <div class="modal-footer">
                 <input type="submit" class="btn primary" value="Отправить">
                 </form>
-                <a class="btn secondary" href="#">Закрыть</a>
+                <%= link_to 'Закрыть', {:controller => 'company', :action => 'show', :friendly_url => @city, :id => @company}, :class => 'btn secondary' %>
 		        </div>
         	</div>
 

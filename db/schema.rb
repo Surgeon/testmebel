@@ -11,16 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111103090539) do
-
-  create_table "TABLE 18", :id => false, :force => true do |t|
-    t.integer "id"
-    t.string  "name",         :limit => 49
-    t.string  "rod_case",     :limit => 49
-    t.string  "pred_case",    :limit => 52
-    t.string  "friendly_url", :limit => 24
-    t.string  "fed_destrict", :limit => 50
-  end
+ActiveRecord::Schema.define(:version => 20111103141651) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -52,6 +43,32 @@ ActiveRecord::Schema.define(:version => 20111103090539) do
     t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "million"
+    t.integer  "xlink"
+    t.string   "rod_case"
+    t.string   "pred_case"
+    t.integer  "rand_city"
+    t.string   "friendly_url"
+  end
+
+  create_table "cities_1", :force => true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "million"
+    t.integer  "xlink"
+    t.string   "rod_case"
+    t.string   "pred_case"
+    t.integer  "rand_city"
+    t.string   "friendly_url"
+  end
+
+  create_table "cities_2", :force => true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "million"
     t.integer  "xlink"
     t.string   "rod_case"
@@ -73,6 +90,27 @@ ActiveRecord::Schema.define(:version => 20111103090539) do
     t.string   "image_link"
     t.integer  "xlink"
     t.integer  "rand_city"
+  end
+
+  create_table "ctmps", :id => false, :force => true do |t|
+    t.integer "id"
+    t.string  "friendly_url"
+    t.string  "name"
+    t.string  "pred_case"
+    t.string  "rod_case"
+    t.integer "region_id"
+    t.string  "zip"
+    t.integer "million"
+  end
+
+  create_table "ctmps_1", :force => true do |t|
+    t.string  "name"
+    t.string  "friendly_url"
+    t.string  "pred_case"
+    t.string  "rod_case"
+    t.integer "region_id"
+    t.string  "zip"
+    t.integer "million"
   end
 
   create_table "news_items", :force => true do |t|
@@ -115,6 +153,17 @@ ActiveRecord::Schema.define(:version => 20111103090539) do
     t.string   "friendly_url"
   end
 
+  create_table "regions_1", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "xlink"
+    t.integer  "rand_city"
+    t.string   "rod_case"
+    t.string   "friendly_url"
+  end
+
   create_table "renews", :force => true do |t|
     t.string   "name"
     t.string   "address"
@@ -143,7 +192,16 @@ ActiveRecord::Schema.define(:version => 20111103090539) do
     t.datetime "updated_at"
   end
 
-  create_table "tmps", :force => true do |t|
+  create_table "tmps", :id => false, :force => true do |t|
+    t.integer "id"
+    t.string  "name"
+    t.string  "rod_case"
+    t.string  "pred_case"
+    t.string  "friendly_url"
+    t.string  "fed_destrict"
+  end
+
+  create_table "tmps_1", :force => true do |t|
     t.string "name"
     t.string "rod_case"
     t.string "pred_case"

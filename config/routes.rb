@@ -1,5 +1,7 @@
 Catalog::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   match "city/search_results" => "city#search_results"
 
 
@@ -10,7 +12,7 @@ Catalog::Application.routes.draw do
   match "article/news_articles" => 'article#news_articles'
 
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
 
   devise_for :users
 
@@ -26,7 +28,7 @@ Catalog::Application.routes.draw do
 
   get 'company/:friendly_url/:id/renew/' => 'company#renew'
 
-  match "company/:friendly_url/:id" => 'company#show'
+  match "company/:friendly_url/:id" => 'company#show' , :as => 'company'
 
   get 'company/add_company' => 'company#add_company'
 
