@@ -10,7 +10,7 @@ class CityController < ApplicationController
     puts page
     if params[:category]
       @city = City.find_by_friendly_url(params[:friendly_url])
-      puts @city.id
+
       @companies = Category.find_by_url(params[:category]).companies.where(:city_id => @city.id).paginate(:page => params[:page], :per_page => 10)
 
       @categories = Category.all

@@ -14,6 +14,8 @@
         <title>Мебельные компании <%= @title %></title>
     <% elsif @title_company %>
         <title><%= @title_company %></title>
+    <% elsif @title_news %>
+        <title><%= @title_news %></title>
     <% else %>
         <title>Мебельные компании</title>
     <% end %>
@@ -31,8 +33,8 @@
 				<div class="span"><img src="http://placehold.it/80x35/2973DB/73C5F8&text=Logo" alt="Placeholder image"></div>
 				<ul class="nav">
 					<li><a href="<%= root_url %>">Каталог предприятий</a></li>
-					<li><a href="<%= root_url + 'article/news_articles/' %>">Новости</a></li>
-					<li><a href="<%= root_url + 'articles/' %>">Статьи</a></li>
+					<li><a href="<%= root_url + 'news/' %>">Новости</a></li>
+
 					<li><a href="#">О проекте</a></li>
 					<li><a href="<%= root_url + 'company/add_company/' %>">Добавить компанию</a></li>
 				</ul>

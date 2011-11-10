@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111103141651) do
+ActiveRecord::Schema.define(:version => 20111110100920) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -51,32 +51,6 @@ ActiveRecord::Schema.define(:version => 20111103141651) do
     t.string   "friendly_url"
   end
 
-  create_table "cities_1", :force => true do |t|
-    t.string   "name"
-    t.integer  "region_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "million"
-    t.integer  "xlink"
-    t.string   "rod_case"
-    t.string   "pred_case"
-    t.integer  "rand_city"
-    t.string   "friendly_url"
-  end
-
-  create_table "cities_2", :force => true do |t|
-    t.string   "name"
-    t.integer  "region_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "million"
-    t.integer  "xlink"
-    t.string   "rod_case"
-    t.string   "pred_case"
-    t.integer  "rand_city"
-    t.string   "friendly_url"
-  end
-
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "address"
@@ -92,26 +66,7 @@ ActiveRecord::Schema.define(:version => 20111103141651) do
     t.integer  "rand_city"
   end
 
-  create_table "ctmps", :id => false, :force => true do |t|
-    t.integer "id"
-    t.string  "friendly_url"
-    t.string  "name"
-    t.string  "pred_case"
-    t.string  "rod_case"
-    t.integer "region_id"
-    t.string  "zip"
-    t.integer "million"
-  end
 
-  create_table "ctmps_1", :force => true do |t|
-    t.string  "name"
-    t.string  "friendly_url"
-    t.string  "pred_case"
-    t.string  "rod_case"
-    t.integer "region_id"
-    t.string  "zip"
-    t.integer "million"
-  end
 
   create_table "news_items", :force => true do |t|
     t.string   "title"
@@ -119,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20111103141651) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_link"
+    t.text     "preview"
   end
 
   create_table "phones", :force => true do |t|
@@ -143,17 +99,6 @@ ActiveRecord::Schema.define(:version => 20111103141651) do
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "regions", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "xlink"
-    t.integer  "rand_city"
-    t.string   "rod_case"
-    t.string   "friendly_url"
-  end
-
-  create_table "regions_1", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
@@ -190,23 +135,6 @@ ActiveRecord::Schema.define(:version => 20111103141651) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "tmps", :id => false, :force => true do |t|
-    t.integer "id"
-    t.string  "name"
-    t.string  "rod_case"
-    t.string  "pred_case"
-    t.string  "friendly_url"
-    t.string  "fed_destrict"
-  end
-
-  create_table "tmps_1", :force => true do |t|
-    t.string "name"
-    t.string "rod_case"
-    t.string "pred_case"
-    t.string "friendly_url"
-    t.string "fed_destrict"
   end
 
   create_table "users", :force => true do |t|
