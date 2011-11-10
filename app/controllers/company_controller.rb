@@ -63,6 +63,7 @@ class CompanyController < ApplicationController
       @city_id = City.find_by_friendly_url(params[:friendly_url]).id
       puts @city_id
       @categories_all = Category.all
+      @company_categories = @company.categories
       @cities = City.all
       if @company.phones.first
         @phone = @company.phones.first.number

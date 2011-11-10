@@ -16,6 +16,7 @@ gem 'heroku'
 gem 'fastercsv'
 gem 'will_paginate'
 gem 'sitemap_generator'
+gem 'yaml_db'
 
 
 

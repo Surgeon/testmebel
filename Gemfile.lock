@@ -162,6 +162,7 @@ GEM
     warden (1.0.6)
       rack (>= 1.0)
     will_paginate (3.0.2)
+    yaml_db (0.2.2)
     yandex_inflect (0.1.2)
       httparty
 
@@ -184,4 +185,5 @@ DEPENDENCIES
   turn
   uglifier
   will_paginate
+  yaml_db
   yandex_inflect

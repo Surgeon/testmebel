@@ -20,9 +20,11 @@
 						<div class="last-news">
 							<dl>
 								<dt>Смотрите также:</dt>
-								<dt><a href="#">Новость о том как интересно продавать мебель</a></dt>
-								<dt><a href="#">Статья о страшном таком страшном явлении как ЙАЗЬ</a></dt>
-								<dt><a href="#">Диван как смысл жизни</a></dt>
+                                <% @last_news.each do |news| %>
+
+                                  <dt><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></dt>
+
+                                <% end %>
 							</dl>
 						</div>
 						<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
@@ -49,8 +51,8 @@
 						</div>
 
 						<div class="news-content">
-							<p><em>09 / 11 / 2011</em></p>
-							<p><%= @news_item.body %></p>
+							<p><em><%= @news_item.updated_at.strftime("%m/ %d/ %Y") %></em></p>
+							<p><%= @news_item.body.html_safe %></p>
 						</div>
 					</div>
 					<!--

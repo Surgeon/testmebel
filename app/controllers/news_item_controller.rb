@@ -5,6 +5,7 @@ class NewsItemController < ApplicationController
 
   def show
     @news_item = NewsItem.find(params[:id])
+    @last_news = NewsItem.find(:all, :limit => 3, :order => "updated_at DESC")
   end
 
 end

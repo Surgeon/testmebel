@@ -34,7 +34,18 @@
                         <div class="clearfix">
                           <select name="tags[]" multiple="" class="choose-tag" data-placeholder="Выберите категорию">
                               <% @categories_all.each do |cat| %>
-                                <option value="<%= cat.id %>"><%= cat.name %></option>
+                                <% default = false %>
+                                <% @company_categories.each do |cocat|
+                                    if cocat.id == cat.id
+                                        default = true
+                                        break
+                                    end
+                                end %>
+                                <% if default == true %>
+                                    <option value="<%= cat.id %>" selected><%= cat.name %></option>
+                                <% else %>
+                                    <option value="<%= cat.id %>" ><%= cat.name %></option>
+                                <% end %>
                               <% end %>
                         </select>
                         </div>
