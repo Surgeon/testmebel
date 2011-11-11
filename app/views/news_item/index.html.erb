@@ -39,5 +39,8 @@
 				</div>
 
 			</div>
-            <%= will_paginate @news_items %>
+            <div class="apple_pagination">
+                <%= will_paginate @news_items, :container => false %>
+            </div>
+
 		</div>

@@ -15,6 +15,14 @@ RailsAdmin.config do |config|
   
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
   config.main_app_name = ['Catalog', 'Admin']
+
+  config.model NewsItem do
+    edit do
+      field :body do
+        ckeditor {true}
+      end
+    end
+  end
   # or for a dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 

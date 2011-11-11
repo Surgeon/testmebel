@@ -1,3 +1,4 @@
+require 'will_paginate/array'
 class CityController < ApplicationController
 
   def show
@@ -7,12 +8,12 @@ class CityController < ApplicationController
     else
       page = params[:page]
     end
-    puts page
+
     if params[:category]
       @city = City.find_by_friendly_url(params[:friendly_url])
 
       @companies = Category.find_by_url(params[:category]).companies.where(:city_id => @city.id).paginate(:page => params[:page], :per_page => 10)
-
+      @current_category_id = Category.find_by_url(params[:category]).id
       @categories = Category.all
     else
       @city = City.find_by_friendly_url(params[:friendly_url])
@@ -82,9 +83,9 @@ class CityController < ApplicationController
     end
 
     @keyword = params[:keyword]
-    puts params[:city]
+
     @city = params[:city]
-    @current_page = page
+
 
     @companies = Array.new
     if (params[:keyword] != '') and (params[:city] != '')
@@ -93,26 +94,18 @@ class CityController < ApplicationController
         comp = Company.where("( name LIKE '%" + params[:keyword] + "%' ) and ( city_id = " + city.id.to_s + " ) ")
         @companies = @companies + comp
       end
-      all_companies = @companies.size
-      @companies = @companies[page.to_i * 5,5]
+      @companies = @companies.paginate(:page => params[:page], :per_page => 10)
     elsif (params[:keyword] != '')  and (params[:city] == '')
-      @companies =  Company.where("name LIKE '%" + params[:keyword] + "%'").limit((page.to_i * 5).to_s + ',5')
-      all_companies = Company.where("name LIKE '%" + params[:keyword] + "%'").size
+      @companies =  Company.where("name LIKE '%" + params[:keyword] + "%'").paginate(:page => params[:page], :per_page => 10)
     elsif (params[:keyword] == '') and (params[:city] != '')
       cities = City.where("name LIKE '%" + params[:city] + "%'")
       cities.each do |city|
         comp = Company.where(' city_id = ' + city.id.to_s)
         @companies = @companies + comp
       end
-      all_companies = @companies.size
-      @companies = @companies[page.to_i * 5,5]
+      @companies = @companies.paginate(:page => params[:page], :per_page => 10)
     else
-      @companies = Company.limit((page.to_i * 5).to_s + ',5')
-      all_companies = Company.all.size
-    end
-    @page_size = (all_companies / 5)
-    if (all_companies % 5) != 0
-      @page_size = @page_size + 1
+      @companies = Company.all.paginate(:page => params[:page], :per_page => 10)
     end
   end
 

@@ -1,4 +1,12 @@
-<ul class="breadcrumb"> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<ul class="breadcrumb">
 			<li><a href="<%= root_url %>">Главная</a><span class="divider">/</span></li>
             <li><a href="<%= root_url + @company.city.region.friendly_url %>"><%= @company.city.region.name %></a><span class="divider">/</span></li>
             <li><a href="<%= root_url + 'city/' + @company.city.friendly_url %>"><%= @company.city.name %></a><span class="divider">/</span></li>
@@ -50,9 +58,13 @@
 					
 					<div class="my_social_buts">					
 					
-					<img src="<%= root_url + 'img/vkontakte.jpg' %>" alt="">
-					<img src="<%= root_url + 'img/facebook.jpg' %>" alt="">
-					<img src="<%= root_url + 'img/twitter.jpg' %>" alt="">
+					<!-- Put this div tag to the place, where the Like block will be -->
+                    <div id="vk_like"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Like("vk_like", {type: "button"});
+                    </script>
+					<div class="fb-like" data-href="www.mebelincity.ru" data-send="false" data-layout="box_count" data-width="45" data-show-faces="false"></div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 					
 					</div>
 					<!--
@@ -79,7 +91,43 @@
 					<div id="services">
 						<div class="map span8">
 						<h4><%= @company.name %> на карте</h4>
-						<img src="<%= root_url + 'img/maps_cover.jpg' %>" alt="">
+						<div class="onmap_l">
+
+                                    <script src="http://api-maps.yandex.ru/1.1/index.xml?key=AJsjvU4BAAAAcNppPAIAvlmNYseKOFppZ_xewxi6YRUSYVoAAAAAAAAAAADjb7QkalSwSlKHQJXhBb5IOnxYlQ=="
+	                        type="text/javascript"></script>
+                            <script type="text/javascript">
+                            var latitude=parseFloat('');
+                            var longitude=parseFloat('');
+                            var maptitle="<%= @company.name %>";
+                            var geocoding='<%= @company.address %>';
+
+                                YMaps.jQuery(function () {
+                                    var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+                                    map.addControl(new YMaps.Zoom());
+                                    if ((latitude>0)&&(longitude>0))
+                                    {
+                                        geopoint=new YMaps.GeoPoint(latitude,longitude);
+                                        map.setCenter(geopoint, 14);
+                                        map.openBalloon(geopoint, maptitle, {hasCloseButton: false, mapAutoPan: 0});
+                                    }
+                                    else
+                                    {
+                                        var geocoder = new YMaps.Geocoder(geocoding);
+                                        // По завершению геокодирования инициализируем карту первым результатом
+                                        YMaps.Events.observe(geocoder, geocoder.Events.Load, function (geocoder) {
+                                            if (geocoder.length()) {
+                                                map.setBounds(geocoder.get(0).getBounds());
+                                                map.openBalloon(geocoder.get(0).getGeoPoint(), maptitle, {hasCloseButton: false, mapAutoPan: 0});
+                                                map.setZoom(14);
+                                            }
+                                        });
+                                    }
+                                })
+                            </script>
+
+                            <div id="YMapsID" style="width:480px;height:200px"></div>
+
+                        </div>
 						<p><strong>похожие категории: <a href="<%= root_url + 'city/' + @rand_city[0].friendly_url %>"><%= @xlink[0].keyword + ' ' +  @case[0] %></a></strong></p>
 					
 					</div>
@@ -95,6 +143,11 @@
 						</div>
 -->
 					</div>
+                  <!-- Put this div tag to the place, where the Comments block will be -->
+                    <div id="vk_comments"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", {limit: 10, width: "496", attach: "*"});
+                    </script>
 
 				</div>
 <!--				

@@ -1,5 +1,7 @@
 Catalog::Application.routes.draw do
 
+  
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   match "city/search_results" => "city#search_results"
@@ -28,7 +30,7 @@ Catalog::Application.routes.draw do
 
   get 'company/:friendly_url/:id/renew/' => 'company#renew'
 
-  match "company/:friendly_url/:id" => 'company#show' , :as => 'company'
+  match "company/:friendly_url/:id(.:format)" => 'company#show' , :as => 'company'
 
   get 'company/add_company' => 'company#add_company'
 
@@ -39,14 +41,14 @@ Catalog::Application.routes.draw do
   match 'company/update_show/:id' => 'company#update_show'
 
 
-  match 'city/:friendly_url/:category' => 'city#show'
+  match 'city/:friendly_url/:category(.:format)' => 'city#show'
 
-  match 'city/:friendly_url' => 'city#show'
+  match 'city/:friendly_url(.:format)' => 'city#show'
 
 
   match 'news/' => 'news_item#index'
 
-  match 'news/show/:id' => 'news_item#show'
+  match 'news/show/:id(.:format)' => 'news_item#show'
 
 
   match '/:friendly_url(.:format)' => 'region#show'
@@ -55,6 +57,10 @@ Catalog::Application.routes.draw do
 
   match 'news/show/:id' => 'news_item#show'
 
+
+  get 'about(.:format)' => 'static_page#about'
+
+  get 'contacts(.:format)' => 'static_page#contacts'
 
   #match 'company/:id' => 'company#show'
   # The priority is based upon order of creation:

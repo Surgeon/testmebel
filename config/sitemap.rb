@@ -1,10 +1,23 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://192.168.0.103:3000"
+SitemapGenerator::Sitemap.default_host = "http://www.mebelincity.ru"
 
 SitemapGenerator::Sitemap.create do
 
+
   Company.find_each do |content|
     add '/company/'+content.city.friendly_url + '/' + content.id.to_s, :lastmod => content.updated_at
+  end
+
+  City.find_each do |content|
+    add '/city/' + content.friendly_url, :lastmod => content.updated_at
+    Category.find_each do |cat|
+      add '/city/' + content.friendly_url + '/' + cat.url, :lastmod => content.updated_at
+    end
+  end
+
+
+  Region.find_each do |content|
+    add '/' + content.friendly_url, :lastmod => content.updated_at
   end
 
   # Put links creation logic here.

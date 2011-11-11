@@ -6,7 +6,7 @@
 #          888  `88b.  d8(  888   888   888  o.  )88b  .8'     `888.  888   888   888   888   888   888   888   888
 #         o888o  o888o `Y888""8o o888o o888o 8""888P' o88o     o8888o `Y8bod88P" o888o o888o o888o o888o o888o o888o
 
-# RailsAdmin config file. Generated on November 03, 2011 16:35
+# RailsAdmin config file. Generated on November 11, 2011 15:27
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -60,10 +60,10 @@ RailsAdmin.config do |config|
 
   #  ==> Included models
   # Add all excluded models here:
-  # config.excluded_models << [Article, Category, City, Company, Ctmp, NewsItem, Phone, Region, Renew, Rphones, Tmp, User, Visitor, Xlink]
+  # config.excluded_models << [Article, Category, City, Company, NewsItem, Phone, Region, Renew, Rphones, StaticPage, User, Visitor, Xlink]
 
   # Add models here if you want to go 'whitelist mode':
-  # config.included_models << [Article, Category, City, Company, Ctmp, NewsItem, Phone, Region, Renew, Rphones, Tmp, User, Visitor, Xlink]
+  # config.included_models << [Article, Category, City, Company, NewsItem, Phone, Region, Renew, Rphones, StaticPage, User, Visitor, Xlink]
 
   # Application wide tried label methods for models' instances
   # config.label_methods << [:description] # Default is [:name, :title]
@@ -203,7 +203,7 @@ RailsAdmin.config do |config|
   #   field :region_id, :integer        # Hidden
   #   field :created_at, :datetime
   #   field :updated_at, :datetime
-  #   field :million, :boolean
+  #   field :million, :integer
   #   field :xlink, :integer
   #   field :rod_case, :string
   #   field :pred_case, :string
@@ -267,28 +267,6 @@ RailsAdmin.config do |config|
 #  - has_many/has_one associations in list section (hidden by default for performance reasons)
 # Fields may also be marked as read_only (and thus not editable) if they are not mass-assignable by current_user
 
-  # config.model Ctmp do
-  #   # Found associations:
-  #   # Found columns:
-  #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  #  end
-
-# All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible.
-# There can be different reasons for that:
-#  - belongs_to _id and _type (polymorphic) columns are hidden in favor of their associations
-#  - associations are hidden if they have no matchable model found (model not included or non-existant)
-#  - they are part of a bigger plan in a plugin (Devise/Paperclip) and hidden by contract
-# Some fields may be hidden depending on the section, if they aren't deemed suitable for display or edition on that section
-#  - non-editable columns (:id, :created_at, ..) in edit sections
-#  - has_many/has_one associations in list section (hidden by default for performance reasons)
-# Fields may also be marked as read_only (and thus not editable) if they are not mass-assignable by current_user
-
   # config.model NewsItem do
   #   # Found associations:
   #   # Found columns:
@@ -298,6 +276,7 @@ RailsAdmin.config do |config|
   #   field :created_at, :datetime
   #   field :updated_at, :datetime
   #   field :image_link, :string
+  #   field :preview, :text
   #   # Sections:
   #   list do; end
   #   export do; end
@@ -439,15 +418,14 @@ RailsAdmin.config do |config|
 #  - has_many/has_one associations in list section (hidden by default for performance reasons)
 # Fields may also be marked as read_only (and thus not editable) if they are not mass-assignable by current_user
 
-  # config.model Tmp do
+  # config.model StaticPage do
   #   # Found associations:
   #   # Found columns:
   #   field :id, :integer
   #   field :name, :string
-  #   field :rod_case, :string
-  #   field :pred_case, :string
-  #   field :friendly_url, :string
-  #   field :fed_destrict, :string
+  #   field :body, :string
+  #   field :created_at, :datetime
+  #   field :updated_at, :datetime
   #   # Sections:
   #   list do; end
   #   export do; end

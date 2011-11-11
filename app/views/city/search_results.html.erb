@@ -3,7 +3,7 @@
     <li>Результаты поиска</li>
 </ul>
 <div class="page-header span12">
-    <h2>Транспортные компании Краснодарского края</h2>
+    <h2>Мебельные компании</h2>
 </div>
 <div id="catalog" class="row">
   <div class="companies span12">
@@ -24,25 +24,11 @@
             </li>
           <% end %>
         </ul>
-        <div class="pagination">
-            <ul>
 
-              <% if @current_page.to_i > 0 %>
-              <li class="prev"><a href="<%= root_url + 'city/search_results?page=' + (@current_page.to_i - 1).to_s + '&keyword=' + @keyword + '&city=' + @city %>">← Previous</a></li>
-              <% end %>
-
-              <% for i in 0..@page_size - 1 do%>
-              <% if @current_page.to_i == i %>
-              <li class="active"><a href="#"><%= i + 1 %></a></li>
-              <% else %>
-              <li><a href="<%= root_url + 'city/search_results?page=' + i.to_s + '&keyword=' + @keyword + '&city=' + @city %>"><%= i + 1 %></a></li>
-              <% end %>
-              <% end %>
-              <% if @current_page.to_i < @page_size - 1 %>
-              <li class="next"><a href="<%= root_url + 'city/search_results?page=' + (@current_page.to_i + 1).to_s + '&keyword=' + @keyword + '&city=' + @city %>">Next »</a></li>
-              <% end %>
-            </ul>
+        <div class="apple_pagination">
+            <%= will_paginate @companies, :container => false %>
         </div>
+
       </div>
     <div class="span4">
       <%= render :partial => 'partials/adsence' %>

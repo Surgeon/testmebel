@@ -22,7 +22,7 @@
                                 <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url}, {:class => 'btn small'} %>                            
                         <% else %>
                           
-                            <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url}, {:class => 'btn small primary'} %>
+                                <%= link_to category.name, {:controller => 'city', :action => 'show', :friendly_url => @city.friendly_url, :category => category.url}, {:class => 'btn small primary'} %>
                           
 						<% end %>
 					<% end %>
@@ -81,8 +81,11 @@
                   </li>
                   <% end %>
                 </ul>
+                <div class="apple_pagination">
+                    <%= will_paginate @companies, :container => false %>
+                </div>
 
-                <%= will_paginate @companies %>
+
 
               </div>
 
