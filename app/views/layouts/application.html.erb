@@ -17,6 +17,8 @@
         <title><%= @title_company %></title>
     <% elsif @title_news %>
         <title><%= @title_news %></title>
+    <% elsif @title_category %>
+        <title><%= @title_category + ' в ' + @city.pred_case %></title>
     <% else %>
         <title>Мебельные компании</title>
     <% end %>
@@ -38,29 +40,29 @@
 	<div class="topbar">
 		<div class="topbar-inner">
 			<div class="container">
-				<div class="span"><img src="http://placehold.it/80x35/2973DB/73C5F8&text=Logo" alt="Placeholder image"></div>
 				<ul class="nav">
 					<li><a href="<%= root_url %>">Каталог предприятий</a></li>
 					<li><a href="<%= root_url + 'news/' %>">Новости</a></li>
 
-					<li><a href="#">О проекте</a></li>
+					<li><a href="<%= root_url + 'about/' %>">О проекте</a></li>
 					<li><a href="<%= root_url + 'company/add_company/' %>">Добавить компанию</a></li>
 				</ul>
+                <div id="serach" class="span-one-third">
+                    <%= form_tag(city_search_results_path, :method => 'get', :class => 'form-stacked') do%>
+                        <%= text_field_tag 'keyword', nil, :placeholder => 'поиск', :id => 'key-word' %>
+                        <%= text_field_tag 'city', nil, :placeholder => 'начните набирать название города', :id => 'city-search', :type => 'hidden' %>
+                        
+                    <% end %>
+                </div>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div id="serach-block" class="row">
-			<div class="">
-					    <div id="serach" class="span-one-third">
-                            <%= form_tag(city_search_results_path, :method => 'get', :class => 'form-stacked') do%>
-                                <%= label_tag('keyword', "Найти")  %>
-                                <%= text_field_tag 'keyword', nil, :placeholder => 'например: курьерская служба', :id => 'key-word' %>
-                                <%= label_tag('city', "Город")  %>
-                                <%= text_field_tag 'city', nil, :placeholder => 'начните набирать название города', :id => 'city-search' %>
-                                <%= submit_tag "Найти", :class => "btn info" %>
-                            <% end %>
-						</div>
+			<div id="header">
+                        <div class="span-one-third">
+                            <a id="logo" href="<%= root_url %>"></a>
+                        </div>
 						<div id="info" class="span-two-thirds">
                             <% if @head_text
                                     head_text = @head_text
@@ -79,7 +81,7 @@
 <%= yield %>
 
 		<footer class="footer">
-			<p>All rights broken.</p>
+			<p>&copy; 2010-2011 <a href="www.mebelincity.ru">www.mebelincity.ru</a>. Мебель в Росии. Новости и каталог компаний отрасли.</p>
 		</footer>
 	</div>
 </body>

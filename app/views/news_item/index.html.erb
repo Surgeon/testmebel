@@ -3,44 +3,36 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div id="news-menu" class="well span3">
+				<div class="span-one-third">
+				<!--
 					<ul>
 						<li class="selected danger"><a href="">Все темы</a></li>
 						<li><a href="">Главные новости</a></li>
 						<li><a href="">Пресс-релизы</a></li>
 						<li><a href="">Законодательство</a></li>
 					</ul>
+				-->
+				<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
 				</div>
-				<div class="span8">
-					<div class="page-header">
-						<h3><%= link_to 'Новости', {:controller => 'news_item', :action => 'index'} %></h3>
-					</div>
+				<div class="span-two-thirds">
+						
+                  <% k = 0 %>
                   <% @news_items.each do |news| %>
-
-                      <% if news.image_link
-                         if File.exists?( Dir.pwd + "/public/companies_images/" + news.image_link )
-                               img = root_url + 'companies_images/' + news.image_link
-                            else
-                               img = 'http://placehold.it/100x80/3399FF/FFF&text=News'
-                            end
-                        else
-                            img = 'http://placehold.it/100x80/3399FF/FFF&text=News'
-                        end
-                        %>
-
-					<div class="news">
-						<span><%= news.updated_at.strftime("%m/%d/%Y") %> - <%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></span>
-						<img src="<%= img %>" alt="">
-						<p><%= news.body.slice(0..100) %></p>
+                      <% if k == 0 %>
+					<div class="news main">				
+						<h3><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></h3>
+						<p><%= news.preview %>...</p>
 					</div>
-
+                      <% k = 1 %>
+                      <% else %>
+					<div class="news">
+						<h5><%= link_to news.title, {:controller => 'news_item', :action => 'show', :id => news.id} %></h5>
+						<p><em><%= news.updated_at.strftime("%m/%d/%Y") %></em> - <%= news.body.slice(0..150) %></p>
+					</div>
 
                     <% end %>
+                    <% end %>
 				</div>
-
+				
 			</div>
-            <div class="apple_pagination">
-                <%= will_paginate @news_items, :container => false %>
-            </div>
-
 		</div>

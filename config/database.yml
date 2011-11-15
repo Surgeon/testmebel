@@ -12,23 +12,20 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Catalog_development
+  database: catalogs_dev
   pool: 5
-  username: root
-  password: '1234'
+  username: rails
+  password: 'rails'
   host: localhost
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Catalog_test
+  database: catalogs_test
   pool: 5
   username: root
-  password: '1234'
+  password: 'h3cheofns'
   host: localhost
 
 production:
@@ -40,3 +37,7 @@ production:
   username: rails
   password: 'rails'
   host: localhost
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.

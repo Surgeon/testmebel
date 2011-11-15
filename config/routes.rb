@@ -13,14 +13,16 @@ Catalog::Application.routes.draw do
 
   match "article/news_articles" => 'article#news_articles'
 
+  get 'about(.:format)' => 'static_page#about'
 
+  get 'contacts(.:format)' => 'static_page#contacts'
   
 
   devise_for :users
 
   root :to => 'region#index'
 
-  match 'company/update_show/:id' => 'company#update_show'
+  match 'company/update_show/:id(.:format)' => 'company#update_show'
 
   post 'company/:friendly_url/:id/contact/' => 'company#contact'
 
@@ -48,19 +50,15 @@ Catalog::Application.routes.draw do
 
   match 'news/' => 'news_item#index'
 
-  match 'news/show/:id(.:format)' => 'news_item#show'
+  match 'news/:id(.:format)' => 'news_item#show'
 
 
   match '/:friendly_url(.:format)' => 'region#show'
 
 
 
-  match 'news/show/:id' => 'news_item#show'
 
 
-  get 'about(.:format)' => 'static_page#about'
-
-  get 'contacts(.:format)' => 'static_page#contacts'
 
   #match 'company/:id' => 'company#show'
   # The priority is based upon order of creation:

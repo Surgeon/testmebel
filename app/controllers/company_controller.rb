@@ -24,7 +24,7 @@ class CompanyController < ApplicationController
       if @xlink[i].case == 0
         @rand_city[i] = City.find_by_id(cit + i)
         if !@rand_city[i]
-          cit = 1
+          cit = 3
           @rand_city[i] = City.find_by_id(cit + i)
         end
         @case[i] = @rand_city[i].pred_case

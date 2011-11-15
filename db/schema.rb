@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111111125124) do
+ActiveRecord::Schema.define(:version => 20111114081338) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -144,14 +144,7 @@ ActiveRecord::Schema.define(:version => 20111111125124) do
 
   create_table "static_pages", :force => true do |t|
     t.string   "name"
-    t.string   "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "subjects", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

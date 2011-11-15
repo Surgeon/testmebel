@@ -3,10 +3,11 @@ class RegionController < ApplicationController
 
   def index
 
-    @regions = Region.all
-    @million_cities = City.find_all_by_million(2)
+    @regions = Region.find(:all, :order => "name ASC")
+    #@million_cities = City.find_all_by_million(2)
+    @million_cities = City.where(:million => 2).order("name ASC")
     @main_news = NewsItem.last
-    @news = NewsItem.find(:all, :limit => "1,8", :order => "updated_at DESC")
+    @news = NewsItem.find(:all, :limit => "2,4", :order => "updated_at DESC")
     @articles = Article.find(:all, :limit => 4)
 
 

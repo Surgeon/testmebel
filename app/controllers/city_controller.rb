@@ -13,20 +13,23 @@ class CityController < ApplicationController
       @city = City.find_by_friendly_url(params[:friendly_url])
 
       @companies = Category.find_by_url(params[:category]).companies.where(:city_id => @city.id).paginate(:page => params[:page], :per_page => 10)
-      @current_category_id = Category.find_by_url(params[:category]).id
+      current_category = Category.find_by_url(params[:category])
+      @current_category_id = current_category.id
       @categories = Category.all
+      @title_category = current_category.name
     else
       @city = City.find_by_friendly_url(params[:friendly_url])
       @companies = @city.companies.paginate(:page => params[:page], :per_page => 10)
       @categories = Category.all
       @current_category_id = 0
+      @title = @city.rod_case
     end
 
 
 
     @place = @city.rod_case
     @region = Region.find(@city.region_id)
-    @title = @city.rod_case
+    
 
     if @city.id == 1072
       @head_text = t('head_text_msc')

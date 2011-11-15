@@ -67,7 +67,7 @@
 					<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 					
 					</div>
-					<!--
+				    <!--
                         <% if @company.image_link
                                  if File.exists?( Dir.pwd + "/public/companies_images/" + @company.image_link )
                                    img = root_url + 'companies_images/' + @company.image_link
@@ -78,12 +78,12 @@
                                 img = 'http://placehold.it/210x180'
                             end
                         %>
-						<img src="<%= img %>" alt="" class="large">
-						<img src="http://placehold.it/65x50/" alt="" class="thumb">
-						<img src="http://placehold.it/65x50/" alt="" class="thumb">
-						<img src="http://placehold.it/65x50/" alt="" class="thumb">
-					-->
-						
+                        <img src="<%= img %>" alt="" class="large">
+                        <img src="http://placehold.it/65x50/" alt="" class="thumb">
+                        <img src="http://placehold.it/65x50/" alt="" class="thumb">
+                        <img src="http://placehold.it/65x50/" alt="" class="thumb">
+                    -->
+                        
 					</div>
 
 					
@@ -125,23 +125,10 @@
                                 })
                             </script>
 
-                            <div id="YMapsID" style="width:480px;height:200px"></div>
+                            <div id="YMapsID" style="width:480px;height:300px"></div>
 
                         </div>
-						<p><strong>похожие категории: <a href="<%= root_url + 'city/' + @rand_city[0].friendly_url %>"><%= @xlink[0].keyword + ' ' +  @case[0] %></a></strong></p>
-					
 					</div>
-						
-										
-					
-
-					
-						
-<!--
-						<div class="social-btns span4">
-							<img src="http://placehold.it/210x120&text=Social+Btns" alt="">
-						</div>
--->
 					</div>
                   <!-- Put this div tag to the place, where the Comments block will be -->
                     <div id="vk_comments"></div>
@@ -150,52 +137,9 @@
                     </script>
 
 				</div>
-<!--				
-				<div id="additional-info" class="span">
-					<ul class="span">
-						<li><span class="bold">Виды услуг:</span>произвольные на выборк клинета</li>
-						<li><span class="bold">Оплата пластиковой картой:</span>есть</li>
-						<li><span class="bold">Работа по воскресеньям:</span>иногда</li>
-						<li><span class="bold">Парковка для минивенов:</span>3 места</li>
-						<li><span class="bold">Вертолетная площадка:</span>действует по средам</li>
-					</ul>
-					<ul class="span">
-						<li><span class="bold">Виды услуг:</span>произвольные на выборк клинета</li>
-						<li><span class="bold">Оплата пластиковой картой:</span>есть</li>
-						<li><span class="bold">Работа по воскресеньям:</span>иногда</li>
-						<li><span class="bold">Парковка для минивенов:</span>3 места</li>
-						<li><span class="bold">Вертолетная площадка:</span>действует по средам</li>
-					</ul>
-				</div>
--->
+
 			</div>
-                <div class="span4">
-				<div class="adsense">
-					<img src="http://placehold.it/220x290/DEF/0069D6&text=AdSense+Block" alt="">
-				</div>
-				<div class="popular">
-				<h5>Компании <%= @company.city.rod_case %></h5>
-				<div>
-                    <% @pop_companies.each do |pop| %>
-					<p>
-						<strong><%= link_to pop.name, {:controller => 'company', :action => 'show', :friendly_url => @company.city.friendly_url, :id => pop.id} %></strong><br />
-						<em><%= pop.address %></em>
-					</p>
-                    <% end %>
-				</div>
-			    </div>
-		<!--
-				<div class="also">
-					<h4>Смотрите также</h4>
-					<ul>
-						<% for i in 0..2 %>
-                          <li>
-                          <a href="<%= root_url + 'city/' + @rand_city[i].friendly_url %>"><%= @xlink[i].keyword + ' ' +  @case[i] %></a>
-                          </li>
-                        <% end %>
-					</ul>
-				</div>
-		-->
+                <%= render :partial => 'partials/pop_and_xlinks', :locals => {:city => @company.city, :pop_companies => @pop_companies, :rand_city => @rand_city, :xlink => @xlink, :word_case => @case}%>
 		    </div>
          </div>
 

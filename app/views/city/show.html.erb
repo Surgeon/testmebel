@@ -56,6 +56,7 @@
             </div>
 			</div>
           <div class="companies span12">
+          <% if @companies.length > 0 %>
             <ul>
               <% @companies.each do |company| %>
                   <li class="company">
@@ -81,10 +82,18 @@
                   </li>
                   <% end %>
                 </ul>
+                
                 <div class="apple_pagination">
                     <%= will_paginate @companies, :container => false %>
                 </div>
-
+                <% else %>
+                <div class="alert-message block-message warning">
+                  <p>В этом городе у нас пока нет компаний. Вы можете добавить известную вам компанию.</p>
+                  <div class="alert-actions">
+                    <a href="/company/add_company" class="btn info">Добавить компанию</a>
+                  </div>
+                </div>
+                <% end %>
 
 
               </div>

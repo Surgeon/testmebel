@@ -1,26 +1,13 @@
 <div id="news-block" class="row">
+		<div class="span16"><h2>Новости отрасли</h2></div>
 			<div id="news">
-				<div class="main-news span4">
-					<img src="http://placehold.it/210x100/2ADCD6/fff&text=Main+news" alt="">
-					<%= link_to @main_news.title, {:controller => 'news_item', :action => 'show', :id => @main_news.id} %>
-					<p><%= @main_news.body.slice(0..100) %><%= link_to '...', {:controller => 'news_item', :action => 'show', :id => @main_news.id} %></p>
+				<div class="main-news span8">
+					<h3><%= link_to @main_news.title, {:controller => 'news_item', :action => 'show', :id => @main_news.id} %></h3>
+					<p><%= @main_news.preview %><%= link_to '...', {:controller => 'news_item', :action => 'show', :id => @main_news.id} %></p>
 				</div>
-				<ul class="news span4">
-                    <% for i in 0..3 do%>
-                    <li class="news-item"><span class="timestamp"><%= @news[i].updated_at.strftime("%m/%d/%Y") %> </span><%= link_to @news[i].title, {:controller => 'news_item', :action => 'show', :id => @news[i].id} %></li>
-                    <% end %>
-				</ul>
-				<ul class="news span4">
-                    <% for i in 4..7 do%>
-                    <li class="news-item"><span class="timestamp"><%= @news[i].updated_at.strftime("%m/%d/%Y") %></span><%= link_to @news[i].title, {:controller => 'news_item', :action => 'show', :id => @news[i].id} %></li>
-                    <% end %>
-				</ul>
-			</div>
-			<div id="sub-news" class="span4">
-				<div class="main-news"><img src="http://placehold.it/210x60/A329DB/fff&text=Sub+news" alt=""><a href=""></a></div>
-				<ul class="news">
-                    <% @articles.each do |article| %>
-					    <li><%= link_to article.title, {:controller => 'article', :action => 'show', :id => article.id} %></li>
+				<ul class="news span8">
+                    <% @news.each do |n| %>
+                    <li class="news-item"><em><%= n.updated_at.strftime("%m/%d/%Y") %> </em><%= link_to n.title, {:controller => 'news_item', :action => 'show', :id => n.id} %></li>
                     <% end %>
 				</ul>
 			</div>
@@ -50,5 +37,3 @@
 				</ul>
 			</div>
 		</div>
-
-

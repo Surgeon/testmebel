@@ -5,20 +5,25 @@ SitemapGenerator::Sitemap.create do
 
 
   Company.find_each do |content|
-    add '/company/'+content.city.friendly_url + '/' + content.id.to_s, :lastmod => content.updated_at
+    add '/company/'+content.city.friendly_url + '/' + content.id.to_s + '.html', :lastmod => content.updated_at
   end
 
   City.find_each do |content|
-    add '/city/' + content.friendly_url, :lastmod => content.updated_at
+    add '/city/' + content.friendly_url + '.html', :lastmod => content.updated_at
     Category.find_each do |cat|
-      add '/city/' + content.friendly_url + '/' + cat.url, :lastmod => content.updated_at
+      add '/city/' + content.friendly_url + '/' + cat.url + '.html', :lastmod => content.updated_at
     end
   end
 
 
   Region.find_each do |content|
-    add '/' + content.friendly_url, :lastmod => content.updated_at
+    add '/' + content.friendly_url + '.html', :lastmod => content.updated_at
   end
+
+  NewsItem.find_each do |content|
+    add '/news/' + content.id.to_s + '.html', :lastmod => content.updated_at
+  end
+
 
   # Put links creation logic here.
   #

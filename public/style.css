@@ -1,8 +1,7 @@
 li{ 
 	list-style: none;
 }
-.bold{
-	font-weight: bold;
+.bold{font-weight: bold;
 }
 .no-mright{
 	margin-right: 0;
@@ -11,7 +10,16 @@ li{
 	margin-left: 0;
 }
 /* search input styles */
-
+#header{
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+#logo{
+	width: 201px;
+	height:143px;
+	background: url(img/logo.png);
+	display:block;
+}
 #key-word{
 	width: 290px;
 	margin-bottom:8px;
@@ -142,9 +150,10 @@ div.info{
 */
 	margin-bottom:21px;
 }
+.news-item {margin-bottom:15px;}
+.main-news h3 {line-height:26px; margin-bottom:10px;}
 .news span{
 	width: 100%;
-    float: left;
 }
 .news img{
 	float: left;

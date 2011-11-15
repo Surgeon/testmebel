@@ -13,6 +13,11 @@ ru:
 
  title_news: " - mebleincity.ru"
  will_paginate:
-  :page_gap: "..."
-  :next_label: 'След.'
-  :previous_label: 'Пред.'
+  page_gap: "..."
+  next_label: 'След.'
+  previous_label: 'Пред.'
+ datetime:
+  distance_in_words:
+   x_days: "Дней назад"
+   about_x_hours: "Часов назад"
+   x_minutes: "Минут назад"
