@@ -6,6 +6,6 @@ tmp/
 test/
 README
 config/database.yml
-.git
-.bundle
-.idea
+.git/
+.bundle/
+.idea/
