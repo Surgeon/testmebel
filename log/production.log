@@ -1,0 +1,1273 @@
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method User.page.
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (110.4ms)
+Completed 200 OK in 282ms (Views: 245.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/bootstrap.min.css" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/chosen/chosen.css" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.1ms)
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+  Processing by RegionController#show as 
+  Parameters: {"friendly_url"=>"favicon"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2011-11-10 14:55:11 +0400
+  Processing by RegionController#show as 
+  Parameters: {"friendly_url"=>"favicon"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+
+
+Started GET "/city/murmansk" for 127.0.0.1 at 2011-11-10 14:55:57 +0400
+  Processing by CityController#show as HTML
+  Parameters: {"friendly_url"=>"murmansk"}
+Rendered partials/_adsence.erb (0.2ms)
+Rendered partials/_pop_and_xlinks.html.erb (3.0ms)
+Rendered city/show.html.erb within layouts/application (313.7ms)
+Completed 200 OK in 1575ms (Views: 238.4ms | ActiveRecord: 118.9ms)
+
+
+Started GET "/bootstrap.min.css" for 127.0.0.1 at 2011-11-10 14:55:59 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/chosen/chosen.css" for 127.0.0.1 at 2011-11-10 14:55:59 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2011-11-10 14:55:59 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 127.0.0.1 at 2011-11-10 14:56:04 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 127.0.0.1 at 2011-11-10 14:56:04 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method Ctmp.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method Tmp.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+
+
+Started GET "/" for 192.168.0.103 at 2011-11-10 14:56:54 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 273ms (Views: 240.0ms | ActiveRecord: 8.9ms)
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method Ctmp.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method Tmp.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Migrating to CreateCompanies (20111019113226)
+Migrating to CreateCategories (20111019114617)
+Migrating to CreateCities (20111019114734)
+Migrating to CreateSubjects (20111019114836)
+Migrating to CreateRegions (20111019124356)
+Migrating to CreateCompaniesCategories (20111020112435)
+Migrating to RemoveCategoryIdFromCompanies (20111020113659)
+Migrating to AddSomeFieldsToCompanies (20111020122738)
+Migrating to AddUrlToCategory (20111021070112)
+Migrating to AddIfMillionToCities (20111021085658)
+Migrating to AddImageLinkToCompanies (20111021124122)
+Migrating to AddXlinkToCitiesAndRegionsAndCompanies (20111021134133)
+Migrating to CreateXlinks (20111024070756)
+Migrating to AddCasesToCities (20111024084744)
+Migrating to AddRandCityToCompanies (20111024114940)
+Migrating to DeviseCreateUsers (20111024123243)
+Migrating to CreateRailsAdminHistoriesTable (20111024123244)
+Migrating to AddRandCityToCities (20111024130342)
+Migrating to AddRandCityToRegions (20111024133317)
+Migrating to CreateNewsItems (20111025071651)
+Migrating to CreateArticles (20111026063107)
+Migrating to AddRodCaseToRegions (20111026091705)
+Migrating to CreatePhones (20111026122107)
+Migrating to AddPicsToNewsAndArticles (20111027070038)
+Migrating to AddFriendlyUrlToCitiesAndRegions (20111027074411)
+Migrating to RenameTypeInPhones (20111027110757)
+Migrating to CreateVisitors (20111027113749)
+Migrating to CreateRenews (20111101095533)
+Migrating to AddCityIdToRenews (20111102071803)
+Migrating to CreateRcategories (20111102072153)
+Migrating to CreateRphones (20111102073343)
+Migrating to AddNewToRenews (20111102123828)
+Migrating to AddCompanyIdToRenews (20111103080829)
+Migrating to RefactorMillionFromCitiesToInteger (20111103141651)
+Migrating to AddPreviewToNewsItems (20111110100920)
+Migrating to CreateStaticPages (20111110121843)
+Migrating to CreateCkeditorAssets (20111111125124)
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+
+
+Started GET "/admin/news_items/new" for 192.168.0.103 at 2011-11-11 15:24:31 +0400
+  Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"news_items"}
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_form_text.html.haml (3.4ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_submit_buttons.html.haml (11.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (84.5ms)
+Completed 500 Internal Server Error in 278ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml___226663642_102069660'
+
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:24:48 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (8.7ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (5.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (97.0ms)
+Completed 500 Internal Server Error in 334ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml___226663642_102069660'
+
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:28:57 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (7.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (4.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (81.1ms)
+Completed 500 Internal Server Error in 502ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml__853398180_106942260'
+
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:29:01 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.4ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (2.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (75.2ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml__853398180_106942260'
+
+
+
+Started GET "/users/sign_up" for 192.168.0.103 at 2011-11-11 15:32:16 +0400
+  Processing by Devise::RegistrationsController#new as HTML
+Redirected to http://192.168.0.103:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 192.168.0.103 at 2011-11-11 15:32:16 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 62ms (Views: 47.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/paginator_style.css" for 192.168.0.103 at 2011-11-11 15:32:17 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/users/sign_in" for 192.168.0.103 at 2011-11-11 15:32:28 +0400
+  Processing by Devise::SessionsController#new as HTML
+Redirected to http://192.168.0.103:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 192.168.0.103 at 2011-11-11 15:32:29 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 49ms (Views: 38.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/paginator_style.css" for 192.168.0.103 at 2011-11-11 15:32:29 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/" for 192.168.0.103 at 2011-11-11 15:35:28 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 108ms (Views: 97.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/paginator_style.css" for 192.168.0.103 at 2011-11-11 15:35:28 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:35:32 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.2ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (2.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (31.9ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml__853398180_106942260'
+
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:35:58 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (2.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (30.7ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     = javascript_include_tag "ckeditor/ckeditor.js"
+    11:   %body.rails_admin{:style => "padding-top: 60px;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml__853398180_106942260'
+
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:37:03 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (1.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (30.6ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:   %body.rails_admin{:style => "padding-top: 60px;"}
+    11:     .topbar-wrapper{:style => "z-index: 5;"}
+  app/views/layouts/rails_admin/application.html.haml:8:in `_app_views_layouts_rails_admin_application_html_haml__853398180_106942260'
+
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:37:29 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (7.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (4.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (80.8ms)
+Completed 500 Internal Server Error in 502ms
+
+ActionView::Template::Error (rails_admin/rails_admin.css isn't precompiled):
+    5:     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    6:     %meta{:content => "NONE,NOARCHIVE", :name => "robots"}
+    7:     = csrf_meta_tag
+    8:     = stylesheet_link_tag "rails_admin/rails_admin.css"
+    9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:   %body.rails_admin{:style => "padding-top: 60px;"}
+    11:     .topbar-wrapper{:style => "z-index: 5;"}
+  
+
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+
+
+Started GET "/admin/" for 192.168.0.103 at 2011-11-11 15:41:48 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (7.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (1.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (5.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (83.4ms)
+Compiled rails_admin/rails_admin.css  (1ms)  (pid 20636)
+WARNING:
+On line 3 of '/home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/assets/stylesheets/rails_admin/imports.css.scss.erb'
+Comments will evaluate the contents of interpolations (#{ ... }) in Sass 3.2.
+Please escape the interpolation by adding a backslash before the `#`.
+Compiled rails_admin/imports.css  (1317ms)  (pid 20636)
+Compiled rails_admin/rails_admin.js  (17ms)  (pid 20636)
+Compiled jquery.js  (14ms)  (pid 20636)
+Compiled jquery_ujs.js  (10ms)  (pid 20636)
+Compiled jquery.remotipart.js  (10ms)  (pid 20636)
+Compiled jquery.iframe-transport.js  (0ms)  (pid 20636)
+Compiled rails_admin/jquery-ui-1.8.16.custom.js  (1ms)  (pid 20636)
+Compiled bootstrap.js  (24ms)  (pid 20636)
+Compiled bootstrap-modal.js  (0ms)  (pid 20636)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 20636)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 20636)
+Compiled bootstrap-tabs.js  (0ms)  (pid 20636)
+Compiled bootstrap-twipsy.js  (13ms)  (pid 20636)
+Compiled bootstrap-popover.js  (0ms)  (pid 20636)
+Compiled bootstrap-alerts.js  (0ms)  (pid 20636)
+Compiled rails_admin/jquery.colorpicker.js  (0ms)  (pid 20636)
+Compiled rails_admin/jquery.ui.timepicker.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.datetimepicker.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.filter-box.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.filtering-multiselect.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.filtering-select.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.remote-form.js  (0ms)  (pid 20636)
+Compiled rails_admin/ra.timeline.js  (0ms)  (pid 20636)
+Compiled rails_admin/ui.js  (478ms)  (pid 20636)
+Compiled rails_admin/themes/default/ui.js  (0ms)  (pid 20636)
+Compiled rails_admin/custom/ui.js  (0ms)  (pid 20636)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (62.7ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (11.8ms)
+Completed 200 OK in 11127ms (Views: 10888.5ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin-4541e1bb35a1cffed77e615de5d899cc.css" for 192.168.0.103 at 2011-11-11 15:42:00 +0400
+Served asset /rails_admin/rails_admin-4541e1bb35a1cffed77e615de5d899cc.css - 200 OK (1ms)
+
+
+Started GET "/assets/rails_admin/rails_admin-c67d1a165dc20d51a622824684dc2211.js" for 192.168.0.103 at 2011-11-11 15:42:00 +0400
+Served asset /rails_admin/rails_admin-c67d1a165dc20d51a622824684dc2211.js - 200 OK (1ms)
+
+
+Started GET "/assets/rails_admin/timeline/arrow_right-cd82fb587617f120eb916496b3bb0fdb.png" for 192.168.0.103 at 2011-11-11 15:42:01 +0400
+Served asset /rails_admin/timeline/arrow_right-cd82fb587617f120eb916496b3bb0fdb.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails_admin/timeline/arrow_left-b2de83362c54b202db75f85e05a8aa7a.png" for 192.168.0.103 at 2011-11-11 15:42:01 +0400
+Served asset /rails_admin/timeline/arrow_left-b2de83362c54b202db75f85e05a8aa7a.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails_admin/timeline/handler-8d2dab2880f393846323cec8df0a13bb.png" for 192.168.0.103 at 2011-11-11 15:42:01 +0400
+Served asset /rails_admin/timeline/handler-8d2dab2880f393846323cec8df0a13bb.png - 200 OK (1ms)
+
+
+Started GET "/admin/history/slider?from%5Bmonth%5D=7&from%5Byear%5D=2011&to%5Bmonth%5D=11&to%5Byear%5D=2011" for 192.168.0.103 at 2011-11-11 15:42:01 +0400
+  Processing by RailsAdmin::HistoryController#slider as JSON
+  Parameters: {"from"=>{"month"=>"7", "year"=>"2011"}, "to"=>{"month"=>"11", "year"=>"2011"}}
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/news_items" for 192.168.0.103 at 2011-11-11 15:42:45 +0400
+  Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"news_items"}
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (5.6ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (332.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (8.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (47.6ms)
+Completed 200 OK in 407ms (Views: 393.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/news_items/8/edit" for 192.168.0.103 at 2011-11-11 15:42:48 +0400
+  Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"model_name"=>"news_items", "id"=>"8"}
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_form_text.html.haml (3.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_submit_buttons.html.haml (4.6ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/application (16.8ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.3ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (8.0ms)
+Rendered /home/vova/.rvm/gems/ruby-1.9.2-p290/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Completed 200 OK in 42ms (Views: 34.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/ckeditor/ckeditor.js" for 192.168.0.103 at 2011-11-11 15:42:48 +0400
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/ckeditor/ckeditor.js"):
+  
+
+
+
+Started GET "/javascripts/ckeditor/config.js" for 192.168.0.103 at 2011-11-11 15:44:42 +0400
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/ckeditor/config.js"):
+  
+
+
+
+Started GET "/javascripts/ckeditor/ckeditor.js" for 192.168.0.103 at 2011-11-11 15:46:47 +0400
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/ckeditor/ckeditor.js"):
+  
+
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 14:56:38 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 334ms (Views: 264.9ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 14:56:39 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/admin" for 85.173.243.28 at 2011-11-14 14:56:48 +0400
+  Processing by RailsAdmin::MainController#dashboard as HTML
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (7.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.8ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (0.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_history.html.haml (5.0ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (115.2ms)
+Compiled rails_admin/rails_admin.css  (1ms)  (pid 25423)
+WARNING:
+On line 3 of '/home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/assets/stylesheets/rails_admin/imports.css.scss.erb'
+Comments will evaluate the contents of interpolations (#{ ... }) in Sass 3.2.
+Please escape the interpolation by adding a backslash before the `#`.
+Compiled rails_admin/imports.css  (1445ms)  (pid 25423)
+Compiled rails_admin/rails_admin.js  (21ms)  (pid 25423)
+Compiled jquery.js  (3ms)  (pid 25423)
+Compiled jquery_ujs.js  (0ms)  (pid 25423)
+Compiled jquery.remotipart.js  (3ms)  (pid 25423)
+Compiled jquery.iframe-transport.js  (0ms)  (pid 25423)
+Compiled rails_admin/jquery-ui-1.8.16.custom.js  (2ms)  (pid 25423)
+Compiled bootstrap.js  (8ms)  (pid 25423)
+Compiled bootstrap-modal.js  (0ms)  (pid 25423)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 25423)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 25423)
+Compiled bootstrap-tabs.js  (0ms)  (pid 25423)
+Compiled bootstrap-twipsy.js  (0ms)  (pid 25423)
+Compiled bootstrap-popover.js  (0ms)  (pid 25423)
+Compiled bootstrap-alerts.js  (0ms)  (pid 25423)
+Compiled rails_admin/jquery.colorpicker.js  (56ms)  (pid 25423)
+Compiled rails_admin/jquery.ui.timepicker.js  (1ms)  (pid 25423)
+Compiled rails_admin/ra.datetimepicker.js  (0ms)  (pid 25423)
+Compiled rails_admin/ra.filter-box.js  (0ms)  (pid 25423)
+Compiled rails_admin/ra.filtering-multiselect.js  (0ms)  (pid 25423)
+Compiled rails_admin/ra.filtering-select.js  (0ms)  (pid 25423)
+Compiled rails_admin/ra.remote-form.js  (0ms)  (pid 25423)
+Compiled rails_admin/ra.timeline.js  (0ms)  (pid 25423)
+Compiled rails_admin/ui.js  (708ms)  (pid 25423)
+Compiled rails_admin/themes/default/ui.js  (0ms)  (pid 25423)
+Compiled rails_admin/custom/ui.js  (0ms)  (pid 25423)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (100.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (17.3ms)
+Completed 200 OK in 13621ms (Views: 13215.5ms | ActiveRecord: 39.7ms)
+
+
+Started GET "/assets/rails_admin/rails_admin-4541e1bb35a1cffed77e615de5d899cc.css" for 85.173.243.28 at 2011-11-14 14:57:02 +0400
+Served asset /rails_admin/rails_admin-4541e1bb35a1cffed77e615de5d899cc.css - 200 OK (1ms)
+
+
+Started GET "/assets/rails_admin/rails_admin-c67d1a165dc20d51a622824684dc2211.js" for 85.173.243.28 at 2011-11-14 14:57:02 +0400
+Served asset /rails_admin/rails_admin-c67d1a165dc20d51a622824684dc2211.js - 200 OK (1ms)
+
+
+Started GET "/assets/rails_admin/timeline/arrow_right-cd82fb587617f120eb916496b3bb0fdb.png" for 85.173.243.28 at 2011-11-14 14:57:04 +0400
+Served asset /rails_admin/timeline/arrow_right-cd82fb587617f120eb916496b3bb0fdb.png - 200 OK (1ms)
+
+
+Started GET "/assets/rails_admin/timeline/arrow_left-b2de83362c54b202db75f85e05a8aa7a.png" for 85.173.243.28 at 2011-11-14 14:57:04 +0400
+Served asset /rails_admin/timeline/arrow_left-b2de83362c54b202db75f85e05a8aa7a.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails_admin/timeline/handler-8d2dab2880f393846323cec8df0a13bb.png" for 85.173.243.28 at 2011-11-14 14:57:04 +0400
+Served asset /rails_admin/timeline/handler-8d2dab2880f393846323cec8df0a13bb.png - 200 OK (1ms)
+
+
+Started GET "/admin/history/slider?from%5Bmonth%5D=7&from%5Byear%5D=2011&to%5Bmonth%5D=11&to%5Byear%5D=2011" for 85.173.243.28 at 2011-11-14 14:57:04 +0400
+  Processing by RailsAdmin::HistoryController#slider as JSON
+  Parameters: {"from"=>{"month"=>"7", "year"=>"2011"}, "to"=>{"month"=>"11", "year"=>"2011"}}
+Completed 200 OK in 29ms (Views: 9.9ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/admin/phones" for 85.173.243.28 at 2011-11-14 14:57:08 +0400
+  Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"phones"}
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (6.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.7ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (2.0ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.8ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.6ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_object_links.html.haml (1.7ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (519.9ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.4ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (8.0ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (3.8ms)
+Completed 200 OK in 554ms (Views: 536.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/static_pages" for 85.173.243.28 at 2011-11-14 14:57:45 +0400
+  Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"static_pages"}
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (14.1ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.5ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/layouts/rails_admin/_navigation.html.haml (8.4ms)
+Rendered /home/rails/.rvm/gems/ruby-1.9.2-p290@dev/bundler/gems/rails_admin-84e17c301db0/app/views/rails_admin/main/_models_links.html.haml (3.0ms)
+Completed 200 OK in 92ms (Views: 27.7ms | ActiveRecord: 7.2ms)
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:30:43 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (80.3ms)
+Completed 200 OK in 307ms (Views: 245.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:30:44 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:30:44 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:30:44 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:30:44 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:30:44 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:30:46 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:33:16 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 50ms (Views: 37.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:33:21 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:33:21 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:33:21 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:33:23 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:33:23 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:33:23 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:35:08 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 43ms (Views: 34.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:35:08 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:35:08 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:35:13 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:35:13 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:35:13 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:35:14 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:39:39 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 50ms (Views: 37.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:39:44 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:39:45 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:39:45 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:39:45 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:39:45 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:39:45 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:40:36 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 37ms (Views: 27.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:40:36 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:40:36 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:40:41 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:40:41 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:40:41 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:40:44 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/" for 85.173.243.28 at 2011-11-14 17:41:46 +0400
+  Processing by RegionController#index as HTML
+Rendered region/index.html.erb within layouts/application (91.6ms)
+Completed 200 OK in 108ms (Views: 95.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/bootstrap.min.css" for 85.173.243.28 at 2011-11-14 17:41:46 +0400
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap.min.css"):
+  
+
+
+
+Started GET "/style.css" for 85.173.243.28 at 2011-11-14 17:41:47 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/paginator_style.css" for 85.173.243.28 at 2011-11-14 17:41:52 +0400
+  Processing by RegionController#show as CSS
+  Parameters: {"friendly_url"=>"paginator_style"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/region_controller.rb:18:in `show'
+
+
+
+Started GET "/chosen/chosen.css" for 85.173.243.28 at 2011-11-14 17:41:52 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.css"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:41:52 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+
+
+Started GET "/chosen/chosen.jquery.min.js" for 85.173.243.28 at 2011-11-14 17:41:52 +0400
+
+ActionController::RoutingError (No route matches [GET] "/chosen/chosen.jquery.min.js"):
+  
+
+Creating scope :page. Overwriting existing method User.page.
+Creating scope :page. Overwriting existing method RailsAdmin::History.page.
+Creating scope :page. Overwriting existing method Article.page.
+Creating scope :page. Overwriting existing method City.page.
+Creating scope :page. Overwriting existing method Company.page.
+Creating scope :page. Overwriting existing method NewsItem.page.
+Creating scope :page. Overwriting existing method Region.page.
+Creating scope :page. Overwriting existing method StaticPage.page.
+Creating scope :page. Overwriting existing method Category.page.
+Creating scope :page. Overwriting existing method Phone.page.
+Creating scope :page. Overwriting existing method Renew.page.
+Creating scope :page. Overwriting existing method Rphones.page.
+Creating scope :page. Overwriting existing method Visitor.page.
+Creating scope :page. Overwriting existing method Xlink.page.
